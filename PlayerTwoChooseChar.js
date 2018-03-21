@@ -11,7 +11,7 @@
     
 // This is when Alexa is ready to listen to a response from the users
     this.emit('responseReady');
-       }    
+    }    
        
     // Triggers when player 2 chooses a character and it will store who is chosen.
     'SecondChooseCharIntent' : function(){
