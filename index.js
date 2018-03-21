@@ -15,14 +15,30 @@ const recipes = require('./recipes');
 
 const APP_ID = undefined; // TODO replace with your app ID (OPTIONAL).
 
+//Constants for all of the characters that can be stored inside the player variable (These are just placeholders)
+const varu = 1;
+const momolt = 2;
+const babool = 3;
+const klaki = 4;
+
+var pOneHp = 50;
+var pTwoHp = 50;
+
+var turn = 1;
+
+//The first player character variable that will store the character chosen (Placeholders)
+var firstPlayerChar;
+var pselction = 1;
+var secondPlayerChar;
+
 const languageStrings = {
     'en': {
         translation: {
             RECIPES: recipes.RECIPE_EN_US,
-            SKILL_NAME: 'Minecraft Helper',
-            WELCOME_MESSAGE: "Welcome to %s. You can ask a question like, what\'s the recipe for a chest? ... Now, what can I help you with?",
+            SKILL_NAME: 'Creature command',
+            WELCOME_MESSAGE: "Welcome to creature command Please choose a character!",
             WELCOME_REPROMPT: 'For instructions on what you can say, please say help me.',
-            DISPLAY_CARD_TITLE: '%s  - Recipe for %s.',
+            DISPLAY_CARD_TITLE: 'Welcome to Creature command',
             HELP_MESSAGE: "You can ask questions such as, what\'s the recipe, or, you can say exit...Now, what can I help you with?",
             HELP_REPROMPT: "You can say things like, what\'s the recipe, or you can say exit...Now, what can I help you with?",
             STOP_MESSAGE: 'Goodbye!',
@@ -66,23 +82,56 @@ const languageStrings = {
 
 const handlers = {
     'PlayVideoIntent' : function() {
+    const cardTitle = 'PLayer 2 chose an attack!';
+    const cardContent = 'PLayer1hp: 50/50,PLayer2hp 40/50';
+    const imageObj = {
+    	smallImageUrl: 'https://imgs.xkcd.com/comics/standards.png',
+    	largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
+    };
 
     // VideoApp.Play directives can be added to the response
     if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-        this.response.playVideo('https://bradleyinteractive.com/assets/videos/Pre-FUSE-2016.mp4');
-    } else {
+        this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4')
+        .cardRenderer(cardTitle, cardContent, imageObj);
+    }else {
         this.response.speak("The video cannot be played on your device. " +
         "To watch this video, try launching the skill from your echo show device.");
     }
-
+    this.emit(':responseReady');
+    
+    },
+    'dodmgIntent' : function(){
+        //this.response.playVideo('http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4');
+    const videoSource = 'https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4';
+    const metadata = {
+    	'title': 'Title for Sample Video',
+    	'subtitle': 'Secondary Title for Sample Video'
+    };
+    this.response.playVideo(videoSource, metadata);
         this.emit(':responseReady');
     },
+    'clacky_chosen' : function(){
+        // make a differnt intent for each of the characters following this logic!
+        if(pselction == 1){
+           var firstPlayerChar = "klaki"; 
+           pselction = 2;
+           this.emit(':ask',"Player one you chose clacky ,Player two please chose a character!");
+        }else{
+            var secondPlayerChar = "klaki";
+            this.emit('attack_handel');
+        }
+        
+    },
+    'attack_handel': function(){
+        
+        if(turn == 1 && firstPlayerChar == "klaki"){
+            //atatck dmg's
+        }
+        // metric crap ton of if statements and attack values
+        
+    },
     'LaunchRequest': function () {
-        this.attributes.speechOutput = this.t('WELCOME_MESSAGE', this.t('SKILL_NAME'));
-        // If the user either does not reply to the welcome message or says something that is not
-        // understood, they will be prompted again with this text.
-        this.attributes.repromptSpeech = this.t('WELCOME_REPROMPT');
-        this.emit(':ask', this.attributes.speechOutput, this.attributes.repromptSpeech);
+        this.emit(':ask', "Player one, Please select a character!", this.attributes.repromptSpeech);
     },
     'AMAZON.HelpIntent': function () {
         this.attributes.speechOutput = this.t('HELP_MESSAGE');
