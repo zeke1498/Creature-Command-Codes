@@ -194,5 +194,3 @@ var secondPlayerTurn = false;
 
         this.emit(':responseReady');
 }
-
-
