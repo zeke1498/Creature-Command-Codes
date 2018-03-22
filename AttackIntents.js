@@ -1,7 +1,3 @@
-//If the 
-var firstPlayerTurn = true;
-
-var secondPlayerTurn = false;
 
 'Fireball' : function() {
         if (secondPlayerChar == varu && secondPlayerTurn == true){
