@@ -23,6 +23,7 @@ const klaki = 4;
 
 var pOneHp = 50;
 var pTwoHp = 50;
+var crit = 1.5;
 
 var turn = 1;
 
