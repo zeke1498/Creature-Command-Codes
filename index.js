@@ -19,7 +19,7 @@ const APP_ID = undefined; // TODO replace with your app ID (OPTIONAL).
 const varu = 1;
 const momolt = 2;
 const babool = 3;
-const klaki = 4;
+var klaki = 4;
 
 var pOneHp = 50;
 var pTwoHp = 50;
@@ -84,9 +84,8 @@ const handlers = {
     'PlayVideoIntent' : function() {
     const cardTitle = 'CURRENT HP';
     const cardContent = 'PLayer1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
-    const talk = "What you want dog";
+    const repromptSpeech = "What you want dog";
     const imageObj = {
-    	smallImageUrl: 'https://imgs.xkcd.com/comics/standards.png',
     	largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
     };
 
@@ -105,7 +104,7 @@ const handlers = {
         if (secondPlayerChar == varu && secondPlayerTurn == true){
             // VideoApp.Play directives can be added to the response
              if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-                 doDmgPlayerTwo(varu, fireball);
+                 pOneHp -= doDmgPlayerTwo(varu, fireball);
                  this.response.playVideo(/*Plays the Fireball attack animation (Right side)*/);
              } else {
                  this.response.speak("The video cannot be played on your device. " +
@@ -116,7 +115,7 @@ const handlers = {
 
         if (firstPlayerChar == varu && firstPlayerTurn == true){
             if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-                doDmgPlayerOne(varu, fireball);
+                pTwoHp -= doDmgPlayerOne(varu, fireball);
                 this.response.playVideo(/*Play fireball animation (Left side)*/);
             } else {
                   this.response.speak("The video cannot be played on your device. " +
@@ -128,22 +127,67 @@ const handlers = {
 },
 
 'Tornado' : function() {
-        if (secondPlayerChar == varu && secondPlayerTurn == true){
+        if (secondPlayerChar == 1 && turn == 2){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerTwo(varu, tornado);
-             this.response.playVideo(/*Plays the Tornado attack animation (Right side)*/);
+             doDmgPlayerTwo(varu, 'tornado');
+             const cardTitle = 'CURRENT HP';
+                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+                const repromptSpeech = "What you want dog";
+                 
+                if(firstPlayerChar == 1){
+                        console.log("Hey this is varu");
+                	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
+                	const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.emit(':responseReady');
+                 
+                }else if(firstPlayerChar == 4){
+                    
+                	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                	
+                	const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                    };
+                   this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }
+                     //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                     this.emit(':responseReady');
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
          }
-        }
-    
-
-        if (firstPlayerChar == varu && firstPlayerTurn == true){
+        }else if (firstPlayerChar == 1 && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerOne(varu, tornado);
-              this.response.playVideo(/*Play Tornado animation (Left side)*/);
+               doDmgPlayerOne(varu, 'tornado');
+              const cardTitle = 'CURRENT HP';
+                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+                const repromptSpeech = "What you want dog";
+                if(secondPlayerChar == 1){
+               
+                	  const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.emit(':responseReady');
+               
+                }else if(secondPlayerChar == 4){
+                	 	const imageObj = {
+                        	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                        	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                  
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.emit(':responseReady');
+                }
+                     
+                     this.emit(':responseReady');
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -157,7 +201,7 @@ const handlers = {
         if (secondPlayerChar == babool && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerTwo(babool, waterpump);
+             pOneHp -= doDmgPlayerTwo(babool, waterpump);
              this.response.playVideo(/*Plays the Waterpump attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -168,7 +212,7 @@ const handlers = {
 
         if (firstPlayerChar == babool && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerOne(babool, waterpump);
+              pTwoHp -= doDmgPlayerOne(babool, waterpump);
               this.response.playVideo(/*Play Waterpump animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -183,7 +227,7 @@ const handlers = {
         if (secondPlayerChar == babool && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerTwo(babool, rocks);
+             pOneHp -= doDmgPlayerTwo(babool, rocks);
              this.response.playVideo(/*Plays the Rocks attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -194,7 +238,7 @@ const handlers = {
 
         if (firstPlayerChar == babool && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerOne(babool, rocks);
+              pTwoHp -= doDmgPlayerOne(babool, rocks);
               this.response.playVideo(/*Play Rocks animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -205,49 +249,167 @@ const handlers = {
         this.emit(':responseReady');
 },
 
-'Waterblast' : function() {
-        if (secondPlayerChar == klaki && secondPlayerTurn == true){
+'waterblast' : function() {
+    
+    console.log("This is turn"+turn);
+    console.log(" water blast this is fpchar"+firstPlayerChar);
+    
+        if (secondPlayerChar == 4 && turn == 2){
+            console.log("THIS IS TRUE PLAYER TWO!!!!!!!");
+            turn = 1;
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerTwo(kalki, waterBlast);
-             this.response.playVideo(/*Plays the Waterblast attack animation (Right side)*/);
+             doDmgPlayerTwo(klaki, 'waterBlast');
+                const cardTitle = 'CURRENT HP';
+                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+                const repromptSpeech = "What you want dog";
+                if(firstPlayerChar == 1){
+
+                	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
+                	const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.emit(':responseReady');
+                 
+                }else if(firstPlayerChar == 4){
+                    
+                	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                	
+                	const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.emit(':responseReady');
+                   
+                }
+                     //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                     this.emit(':responseReady');
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
          }
-        }
-    
-
-        if (firstPlayerChar == klaki && firstPlayerTurn == true){
+        }else if (firstPlayerChar == 4 && turn == 1){
+            console.log("THIS IS TRUE PLAYER ONE!!!!!!!");
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerOne(klaki, waterBlast);
-              this.response.playVideo(/*Play Waterblast animation (Left side)*/);
+             doDmgPlayerOne(klaki, 'waterBlast');
+             turn = 2;
+                const cardTitle = 'CURRENT HP';
+                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+                const repromptSpeech = "What you want dog";
+                
+                
+                    const imageObj = {
+                    	smallImageUrl: 'https://imgs.xkcd.com/comics/standards.png',
+                    	largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
+                    };
+                
+                if(secondPlayerChar == 1){
+                  console.log("secondPlayerChar is 1");
+                	const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+               
+                }else if( secondPlayerChar == 4){
+                    console.log("scond player is 4");
+                	const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                  
+                }
+                
+                     
+                     this.emit(':responseReady');
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
-         }
+        }
         }
 
         this.emit(':responseReady');
 },
 
 'IceSpin' : function() {
-        if (secondPlayerChar == klaki && secondPlayerTurn == true){
+        if (secondPlayerChar == 4 && turn == 2){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerTwo(klaki, iceSpin);
-             this.response.playVideo(/*Plays the IceSpin attack animation (Right side)*/);
+             doDmgPlayerTwo(klaki, 'iceSpin');
+             turn = 1;
+                const cardTitle = 'CURRENT HP';
+                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+                const repromptSpeech = "What you want dog";
+                if(firstPlayerChar == 1){
+
+                	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
+                	const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.emit(':responseReady');
+                 
+                }else if(firstPlayerChar == 4){
+                    
+                	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                	
+                	const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.emit(':responseReady');
+                   
+                }
+                     //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                     this.emit(':responseReady');
+        
+             
+             
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
          }
         }
-    
-
-        if (firstPlayerChar == klaki && firstPlayerTurn == true){
+    else if (firstPlayerChar == 4 && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerOne(klaki, iceSpin);
-              this.response.playVideo(/*Play IceSpin animation (Left side)*/);
+               doDmgPlayerOne(klaki, 'iceSpin');
+             turn = 2;
+                const cardTitle = 'CURRENT HP';
+                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+                const repromptSpeech = "What you want dog";
+                
+                
+                    const imageObj = {
+                    	smallImageUrl: 'https://imgs.xkcd.com/comics/standards.png',
+                    	largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
+                    };
+                
+                if(secondPlayerChar == 1){
+                  console.log("secondPlayerChar is 1");
+                	const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+               
+                }else if( secondPlayerChar == 4){
+                    console.log("scond player is 4");
+                	const imageObj = {
+                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                    };
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                  
+                }
+                
+                     
+                     this.emit(':responseReady');
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -261,7 +423,7 @@ const handlers = {
         if (secondPlayerChar == momolt && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerTwo(momolt, earthquake);
+             pOneHp -= doDmgPlayerTwo(momolt, earthquake);
              this.response.playVideo(/*Plays the Earthquake attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -272,7 +434,7 @@ const handlers = {
 
         if (firstPlayerChar == momolt && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerOne(momolt, earthquake);
+              pTwoHp -= doDmgPlayerOne(momolt, earthquake);
               this.response.playVideo(/*Play Earthquake animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -287,7 +449,7 @@ const handlers = {
         if (secondPlayerChar == momolt && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerTwo(momolt, punch);
+             pOneHp -= doDmgPlayerTwo(momolt, punch);
              this.response.playVideo(/*Plays the Punch attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -298,7 +460,7 @@ const handlers = {
 
         if (firstPlayerChar == momolt && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerOne(momolt, punch);
+              pTwoHp -= doDmgPlayerOne(momolt, punch);
               this.response.playVideo(/*Play Punch animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -322,22 +484,32 @@ const handlers = {
     'clacky_chosen' : function(){
         // make a differnt intent for each of the characters following this logic!
         if(pselction == 1){
-           var firstPlayerChar = "klaki"; 
-           pselction = 2;
-           this.emit(':ask',"Player one you chose clacky ,Player two please chose a character!");
+            firstPlayerChar = 4; 
+            pselction = 2;
+           this.emit(':ask',"Player one you chose clacky ,Player two please choose a character!");
         }else{
-            var secondPlayerChar = "klaki";
-            this.emit(':ask',"Player one you chose clacky ,Player two please chose a character!");
+            secondPlayerChar = 4;
+            turn = 1;
+             console.log(turn);
+             console.log(firstPlayerChar);
+            this.emit(':ask',"Player two you chose clacky ,Player one choose an attack");
             //this.emit('attack_handel');
         }
         
     },
-    'attack_handel': function(){
-        
-        if(turn == 1 && firstPlayerChar == "klaki"){
-            //atatck dmg's
+        'varu_chosen' : function(){
+        // make a differnt intent for each of the characters following this logic!
+        if(pselction == 1){
+            firstPlayerChar = 1; 
+           pselction = 2;
+           this.emit(':ask',"Player one you chose varu ,Player two please choose a character!");
+        }else{
+            secondPlayerChar = 1;
+            console.log(turn);
+            console.log(firstPlayerChar);
+            this.emit(':ask',"Player two you chose varu ,Player one choose an attack");
+            //this.emit('attack_handel');
         }
-        // metric crap ton of if statements and attack values
         
     },
     'LaunchRequest': function () {
@@ -367,7 +539,7 @@ const handlers = {
     },
 };
 
-     function doDmgPlayerOne(pOneElement,pOneMove){
+    function doDmgPlayerOne(pOneElement,pOneMove){
   //fire element character
   if(pOneElement == momolt){
     if(pOneMove == "punch"){
@@ -382,19 +554,23 @@ const handlers = {
   if(pOneElement == klaki){
     if(pOneMove == "waterBlast"){
       var dmg = Math.floor(Math.random() * (14 - 11 + 1)) + 11;
-        return critChance(dmg);
+        //return critChance(dmg);
+        pOneHp -= dmg;
     }else if (pOneMove == "iceSpin") {
       var dmg = Math.floor(Math.random() * (9 - 6 + 1)) + 9;
-        return critChance(dmg);
+        //return critChance(dmg);
+        pOneHp -= dmg;
     }
   }
   if(pOneElement == varu){
     if(pOneMove == "tornado"){
       var dmg = Math.floor(Math.random() * (12 - 9 + 1)) + 12;
-        return critChance(dmg);
+        //return critChance(dmg);
+        pOneHp -= dmg;
     }else if (pOneMove == "fireball") {
       var dmg = Math.floor(Math.random() * (14 -  8 + 1 )) + 14;
-        return critChance(dmg);
+        //return critChance(dmg);
+        pOneHp -= dmg;
     }
   }
   if(pOneElement == "babool"){
@@ -424,19 +600,23 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
   if(pTwoElement == klaki){
     if(pTwoMove == "waterBlast"){
       var dmg = Math.floor(Math.random() * (14 - 11 + 1)) + 11;
-        return critChance(dmg);
+        //return critChance(dmg);
+        pTwoHp -= dmg;
     }else if (pTwoMove == "iceSpin") {
       var dmg = Math.floor(Math.random() * (9 - 6 + 1)) + 9;
-        return critChance(dmg);
+        //return critChance(dmg);
+        pTwoHp -= dmg;
     }
   }
   if(pTwoElement == varu){
     if(pTwoMove =="'tornado"){
       var dmg = Math.floor(Math.random() * (12 - 9 + 1)) + 12;
-        return critChance(dmg);
+        //return critChance(dmg);
+        pTwoHp -= dmg;
     }else if (pTwoMove == "fireball") {
       var dmg = Math.floor(Math.random() * (14 -  8 + 1 )) + 14;
-        return critChance(dmg);
+        //return critChance(dmg);
+        pTwoHp -= dmg;
     }
   }
   if(pTwoElement == "babool"){
@@ -451,8 +631,6 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
 
 }
 
-
-
   function critChance(dmg){
   var chance = Math.floor(Math.random() * 100) + 1;
   //checks to see if chance is less than 6 out of 100
@@ -461,7 +639,7 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
   }else{
     return dmg;
   }
-}
+  }
 
 
 exports.handler = function (event, context) {
