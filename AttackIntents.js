@@ -238,7 +238,7 @@ const handlers = {
                 	largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
                 };
                      this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4')
-        .cardRenderer(cardTitle, cardContent, imageObj);
+                     .cardRenderer(cardTitle, cardContent, imageObj);
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -339,12 +339,13 @@ const handlers = {
     'clacky_chosen' : function(){
         // make a differnt intent for each of the characters following this logic!
         if(pselction == 1){
-           var firstPlayerChar = 4; 
+            firstPlayerChar = 4; 
            pselction = 2;
            this.emit(':ask',"Player one you chose clacky ,Player two please choose a character!");
         }else{
-            var secondPlayerChar = 4;
-            var turn = 1;
+            secondPlayerChar = 4;
+                console.log(turn);
+             console.log(firstPlayerChar);
             this.emit(':ask',"Player two you chose clacky ,Player one choose an attack");
             //this.emit('attack_handel');
         }
