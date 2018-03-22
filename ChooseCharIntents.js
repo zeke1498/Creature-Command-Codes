@@ -3,7 +3,7 @@
     if(pselction == 1){
        var firstPlayerChar = "klaki"; 
        pselction = 2;
-       this.emit(':ask',"Player one you chose Klaki ,Player two please chose a character!");
+       this.emit(':ask',"Player one you chose Klaki ,Player two please choose a character!");
     }else{
         var secondPlayerChar = "klaki";
         this.emit('attack_handel');
@@ -15,7 +15,7 @@
     if(pselction == 1){
        var firstPlayerChar = "varu"; 
        pselction = 2;
-       this.emit(':ask',"Player one you chose Varu ,Player two please chose a character!");
+       this.emit(':ask',"Player one you chose Varu ,Player two please choose a character!");
     }else{
         var secondPlayerChar = "varu";
         this.emit('attack_handel');
@@ -27,7 +27,7 @@
     if(pselction == 1){
        var firstPlayerChar = "momolt"; 
        pselction = 2;
-       this.emit(':ask',"Player one you chose Momolt ,Player two please chose a character!");
+       this.emit(':ask',"Player one you chose Momolt ,Player two please choose a character!");
     }else{
         var secondPlayerChar = "momolt";
         this.emit('attack_handel');
@@ -39,7 +39,7 @@
     if(pselction == 1){
        var firstPlayerChar = "babool"; 
        pselction = 2;
-       this.emit(':ask',"Player one you chose Babool ,Player two please chose a character!");
+       this.emit(':ask',"Player one you chose Babool ,Player two please choose a character!");
     }else{
         var secondPlayerChar = "babool";
         this.emit('attack_handel');
