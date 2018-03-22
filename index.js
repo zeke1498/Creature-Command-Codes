@@ -82,8 +82,9 @@ const languageStrings = {
 
 const handlers = {
     'PlayVideoIntent' : function() {
-    const cardTitle = 'PLayer 2 chose an attack!';
-    const cardContent = 'PLayer1hp: 50/50,PLayer2hp 40/50';
+    const cardTitle = 'CURRENT HP';
+    const cardContent = 'PLayer1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+    const talk = "What you want dog";
     const imageObj = {
     	smallImageUrl: 'https://imgs.xkcd.com/comics/standards.png',
     	largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
@@ -100,34 +101,37 @@ const handlers = {
     this.emit(':responseReady');
     
     },
-    'Fireball' : function() {
-        if (secondPlayerChar == varu && turn == 2){
-        	// VideoApp.Play directives can be added to the response
-   			 if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-       			 this.response.playVideo(/*Plays the Fireball attack animation (Right side)*/);
-   			 } else {
-       			 this.response.speak("The video cannot be played on your device. " +
-       			 "To watch this video, try launching the skill from your echo show device.");
-   			 }
+'Fireball' : function() {
+        if (secondPlayerChar == varu && secondPlayerTurn == true){
+            // VideoApp.Play directives can be added to the response
+             if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+                 doDmgPlayerTwo(varu, fireball);
+                 this.response.playVideo(/*Plays the Fireball attack animation (Right side)*/);
+             } else {
+                 this.response.speak("The video cannot be played on your device. " +
+                 "To watch this video, try launching the skill from your echo show device.");
+             }
         }
     
 
-        if (firstPlayerChar == varu && turn == 1){
-        	if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-       			  this.response.playVideo(/*Play fireball animation (Left side)*/);
-    		} else {
-        		  this.response.speak("The video cannot be played on your device. " +
-        		  "To watch this video, try launching the skill from your echo show device.");
-    		 }
+        if (firstPlayerChar == varu && firstPlayerTurn == true){
+            if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+                doDmgPlayerOne(varu, fireball);
+                this.response.playVideo(/*Play fireball animation (Left side)*/);
+            } else {
+                  this.response.speak("The video cannot be played on your device. " +
+                  "To watch this video, try launching the skill from your echo show device.");
+             }
         }
 
         this.emit(':responseReady');
 },
 
 'Tornado' : function() {
-        if (secondPlayerChar == varu && turn == 2){
+        if (secondPlayerChar == varu && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+             doDmgPlayerTwo(varu, tornado);
              this.response.playVideo(/*Plays the Tornado attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -136,8 +140,9 @@ const handlers = {
         }
     
 
-        if (firstPlayerChar == varu && turn == 1){
+        if (firstPlayerChar == varu && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+              doDmgPlayerOne(varu, tornado);
               this.response.playVideo(/*Play Tornado animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -149,9 +154,10 @@ const handlers = {
 },
 
 'Waterpump' : function() {
-        if (secondPlayerChar == babool && turn == 2){
+        if (secondPlayerChar == babool && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+             doDmgPlayerTwo(babool, waterpump);
              this.response.playVideo(/*Plays the Waterpump attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -160,8 +166,9 @@ const handlers = {
         }
     
 
-        if (firstPlayerChar == babool && turn == 1){
+        if (firstPlayerChar == babool && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+              doDmgPlayerOne(babool, waterpump);
               this.response.playVideo(/*Play Waterpump animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -173,9 +180,10 @@ const handlers = {
 },
 
 'Rocks' : function() {
-        if (secondPlayerChar == babool && turn == 2){
+        if (secondPlayerChar == babool && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+             doDmgPlayerTwo(babool, rocks);
              this.response.playVideo(/*Plays the Rocks attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -184,8 +192,9 @@ const handlers = {
         }
     
 
-        if (firstPlayerChar == babool && turn == 1){
+        if (firstPlayerChar == babool && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+              doDmgPlayerOne(babool, rocks);
               this.response.playVideo(/*Play Rocks animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -197,9 +206,10 @@ const handlers = {
 },
 
 'Waterblast' : function() {
-        if (secondPlayerChar == klaki && turn == 2){
+        if (secondPlayerChar == klaki && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+             doDmgPlayerTwo(kalki, waterBlast);
              this.response.playVideo(/*Plays the Waterblast attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -208,8 +218,9 @@ const handlers = {
         }
     
 
-        if (firstPlayerChar == klaki && turn == 1){
+        if (firstPlayerChar == klaki && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+              doDmgPlayerOne(klaki, waterBlast);
               this.response.playVideo(/*Play Waterblast animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -221,9 +232,10 @@ const handlers = {
 },
 
 'IceSpin' : function() {
-        if (secondPlayerChar == klaki && turn == 2){
+        if (secondPlayerChar == klaki && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+             doDmgPlayerTwo(klaki, iceSpin);
              this.response.playVideo(/*Plays the IceSpin attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -232,8 +244,9 @@ const handlers = {
         }
     
 
-        if (firstPlayerChar == klaki && turn == 1){
+        if (firstPlayerChar == klaki && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+              doDmgPlayerOne(klaki, iceSpin);
               this.response.playVideo(/*Play IceSpin animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -245,9 +258,10 @@ const handlers = {
 },
 
 'Earthquake' : function() {
-        if (secondPlayerChar == momolt && turn == 2){
+        if (secondPlayerChar == momolt && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+             doDmgPlayerTwo(momolt, earthquake);
              this.response.playVideo(/*Plays the Earthquake attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -256,8 +270,9 @@ const handlers = {
         }
     
 
-        if (firstPlayerChar == momolt && turn == 1){
+        if (firstPlayerChar == momolt && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+              doDmgPlayerOne(momolt, earthquake);
               this.response.playVideo(/*Play Earthquake animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -269,9 +284,10 @@ const handlers = {
 },
 
 'Punch' : function() {
-        if (secondPlayerChar == momolt && turn == 2){
+        if (secondPlayerChar == momolt && secondPlayerTurn == true){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+             doDmgPlayerTwo(momolt, punch);
              this.response.playVideo(/*Plays the Punch attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -280,8 +296,9 @@ const handlers = {
         }
     
 
-        if (firstPlayerChar == momolt && turn == 1){
+        if (firstPlayerChar == momolt && firstPlayerTurn == true){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+              doDmgPlayerOne(momolt, punch);
               this.response.playVideo(/*Play Punch animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -291,6 +308,7 @@ const handlers = {
 
         this.emit(':responseReady');
 },
+
     'dodmgIntent' : function(){
         //this.response.playVideo('http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4');
     const videoSource = 'https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4';
@@ -309,7 +327,8 @@ const handlers = {
            this.emit(':ask',"Player one you chose clacky ,Player two please chose a character!");
         }else{
             var secondPlayerChar = "klaki";
-            this.emit('attack_handel');
+            this.emit(':ask',"Player one you chose clacky ,Player two please chose a character!");
+            //this.emit('attack_handel');
         }
         
     },
@@ -348,6 +367,103 @@ const handlers = {
     },
 };
 
+     function doDmgPlayerOne(pOneElement,pOneMove){
+  //fire element character
+  if(pOneElement == momolt){
+    if(pOneMove == "punch"){
+      var dmg = Math.floor(Math.random() * (16 - 10 + 1)) + 10;
+        console.log(critChance(dmg));
+    }else if (pOneMove == "earthquake") {
+      var dmg = Math.floor(Math.random() * (12 - 10 + 1)) + 10;
+        return critChance(dmg);
+    }
+  }
+  //water type character
+  if(pOneElement == klaki){
+    if(pOneMove == "waterBlast"){
+      var dmg = Math.floor(Math.random() * (14 - 11 + 1)) + 11;
+        return critChance(dmg);
+    }else if (pOneMove == "iceSpin") {
+      var dmg = Math.floor(Math.random() * (9 - 6 + 1)) + 9;
+        return critChance(dmg);
+    }
+  }
+  if(pOneElement == varu){
+    if(pOneMove == "tornado"){
+      var dmg = Math.floor(Math.random() * (12 - 9 + 1)) + 12;
+        return critChance(dmg);
+    }else if (pOneMove == "fireball") {
+      var dmg = Math.floor(Math.random() * (14 -  8 + 1 )) + 14;
+        return critChance(dmg);
+    }
+  }
+  if(pOneElement == "babool"){
+    if(pOneMove == "rocks"){
+      var dmg = Math.floor(Math.random() * (15 - 13 + 1)) + 15;
+        return critChance(dmg);
+    }else if (pOneMove == "waterpump") {
+      var dmg = Math.floor(Math.random() * (11 -  8 + 1 )) + 11;
+        return critChance(dmg);
+    }
+  }
+}
+
+
+function doDmgPlayerTwo(pTwoElement,pTwoMove){
+    //fire element character
+  if(pTwoElement == momolt){
+    if(pTwoMove == "punch"){
+      var dmg = Math.floor(Math.random() * (16 - 10 + 1)) + 10;
+        console.log(critChance(dmg));
+    }else if (pTwoMove == "earthquake") {
+      var dmg = Math.floor(Math.random() * (12 - 10 + 1)) + 10;
+        return critChance(dmg);
+    }
+  }
+  //water type character
+  if(pTwoElement == klaki){
+    if(pTwoMove == "waterBlast"){
+      var dmg = Math.floor(Math.random() * (14 - 11 + 1)) + 11;
+        return critChance(dmg);
+    }else if (pTwoMove == "iceSpin") {
+      var dmg = Math.floor(Math.random() * (9 - 6 + 1)) + 9;
+        return critChance(dmg);
+    }
+  }
+  if(pTwoElement == varu){
+    if(pTwoMove =="'tornado"){
+      var dmg = Math.floor(Math.random() * (12 - 9 + 1)) + 12;
+        return critChance(dmg);
+    }else if (pTwoMove == "fireball") {
+      var dmg = Math.floor(Math.random() * (14 -  8 + 1 )) + 14;
+        return critChance(dmg);
+    }
+  }
+  if(pTwoElement == "babool"){
+    if(pTwoMove == "rocks"){
+      var dmg = Math.floor(Math.random() * (15 - 13 + 1)) + 15;
+        return critChance(dmg);
+    }else if (pTwoMove == "waterpump") {
+      var dmg = Math.floor(Math.random() * (11 -  8 + 1 )) + 11;
+        return critChance(dmg);
+    }
+  }
+
+}
+
+
+
+  function critChance(dmg){
+  var chance = Math.floor(Math.random() * 100) + 1;
+  //checks to see if chance is less than 6 out of 100
+  if(chance < 10){
+     return dmg * crit;
+  }else{
+    return dmg;
+  }
+}
+
+
 exports.handler = function (event, context) {
     const alexa = Alexa.handler(event, context);
     alexa.APP_ID = APP_ID;
@@ -356,4 +472,3 @@ exports.handler = function (event, context) {
     alexa.registerHandlers(handlers);
     alexa.execute();
 };
-
