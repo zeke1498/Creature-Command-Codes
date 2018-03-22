@@ -24,7 +24,8 @@
         }
 
         this.emit(':responseReady');
-}
+},
+
 
 'Tornado' : function() {
         if (secondPlayerChar == varu && secondPlayerTurn == true){
@@ -50,7 +51,7 @@
         }
 
         this.emit(':responseReady');
-}
+},
 
 'Waterpump' : function() {
         if (secondPlayerChar == babool && secondPlayerTurn == true){
@@ -76,7 +77,7 @@
         }
 
         this.emit(':responseReady');
-}
+},
 
 'Rocks' : function() {
         if (secondPlayerChar == babool && secondPlayerTurn == true){
@@ -102,7 +103,7 @@
         }
 
         this.emit(':responseReady');
-}
+},
 
 'Waterblast' : function() {
         if (secondPlayerChar == klaki && secondPlayerTurn == true){
@@ -128,7 +129,7 @@
         }
 
         this.emit(':responseReady');
-}
+},
 
 'IceSpin' : function() {
         if (secondPlayerChar == klaki && secondPlayerTurn == true){
@@ -154,7 +155,7 @@
         }
 
         this.emit(':responseReady');
-}
+},
 
 'Earthquake' : function() {
         if (secondPlayerChar == momolt && secondPlayerTurn == true){
@@ -180,7 +181,7 @@
         }
 
         this.emit(':responseReady');
-}
+},
 
 'Punch' : function() {
         if (secondPlayerChar == momolt && secondPlayerTurn == true){
@@ -206,7 +207,7 @@
         }
 
         this.emit(':responseReady');
-}
+},
 
     function doDmgPlayerOne(pOneElement,pOneMove){
   //fire element character
@@ -247,7 +248,7 @@
         return critChance(dmg);
     }
   }
-}
+},
 
 
 function doDmgPlayerTwo(pTwoElement,pTwoMove){
@@ -290,7 +291,7 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
     }
   }
 
-}
+},
 
   function critChance(dmg){
   var chance = Math.floor(Math.random() * 100) + 1;
@@ -300,4 +301,4 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
   }else{
     return dmg;
   }
-}
+},
