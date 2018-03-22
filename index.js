@@ -115,7 +115,7 @@ const handlers = {
         if(pselction == 1){
            var firstPlayerChar = "klaki"; 
            pselction = 2;
-           this.emit(':ask',"Player one you chose clacky ,Player two please chose a character!");
+           this.emit(':ask',"Player one you chose clacky ,Player two please choose a character!");
         }else{
             var secondPlayerChar = "klaki";
             this.emit('attack_handel');
