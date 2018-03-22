@@ -1,10 +1,11 @@
 
 
 'Fireball' : function() {
-        if (secondPlayerChar == varu && secondPlayerTurn == true){
+        if (secondPlayerChar == varu && turn == 1){
             // VideoApp.Play directives can be added to the response
              if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-                 pOneHp -= doDmgPlayerTwo(varu, fireball);
+                pOneHp -= doDmgPlayerTwo(varu, fireball);
+
                  this.response.playVideo(/*Plays the Fireball attack animation (Right side)*/);
              } else {
                  this.response.speak("The video cannot be played on your device. " +
@@ -13,9 +14,9 @@
         }
     
 
-        if (firstPlayerChar == varu && firstPlayerTurn == true){
+        if (firstPlayerChar == varu && turn == 0){
             if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-                pTwoHp -= doDmgPlayerOne(varu, fireball);
+               pTwoHp -= doDmgPlayerOne(varu, fireball);
                 this.response.playVideo(/*Play fireball animation (Left side)*/);
             } else {
                   this.response.speak("The video cannot be played on your device. " +
@@ -24,14 +25,13 @@
         }
 
         this.emit(':responseReady');
-},
-
+}
 
 'Tornado' : function() {
-        if (secondPlayerChar == varu && secondPlayerTurn == true){
+        if (secondPlayerChar == varu && turn == 1){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             pOneHp -= doDmgPlayerTwo(varu, tornado);
+            pOneHp -= doDmgPlayerTwo(varu, tornado);
              this.response.playVideo(/*Plays the Tornado attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -40,9 +40,9 @@
         }
     
 
-        if (firstPlayerChar == varu && firstPlayerTurn == true){
+        if (firstPlayerChar == varu && turn == 0){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              pTwoHp -= doDmgPlayerOne(varu, tornado);
+               pTwoHp -= doDmgPlayerOne(varu, tornado);
               this.response.playVideo(/*Play Tornado animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -51,10 +51,10 @@
         }
 
         this.emit(':responseReady');
-},
+}
 
 'Waterpump' : function() {
-        if (secondPlayerChar == babool && secondPlayerTurn == true){
+        if (secondPlayerChar == babool && turn == 1){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
              pOneHp -= doDmgPlayerTwo(babool, waterpump);
@@ -66,9 +66,9 @@
         }
     
 
-        if (firstPlayerChar == babool && firstPlayerTurn == true){
+        if (firstPlayerChar == babool && turn == 0){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              pTwoHp -= doDmgPlayerOne(babool, waterpump);
+             pTwoHp -= doDmgPlayerOne(babool, waterpump);
               this.response.playVideo(/*Play Waterpump animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -77,13 +77,13 @@
         }
 
         this.emit(':responseReady');
-},
+}
 
 'Rocks' : function() {
-        if (secondPlayerChar == babool && secondPlayerTurn == true){
+        if (secondPlayerChar == babool && turn == 1){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             pOneHp -= doDmgPlayerTwo(babool, rocks);
+            pOneHp -= doDmgPlayerTwo(babool, rocks);
              this.response.playVideo(/*Plays the Rocks attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -92,9 +92,9 @@
         }
     
 
-        if (firstPlayerChar == babool && firstPlayerTurn == true){
+        if (firstPlayerChar == babool && turn == 0){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              pTwoHp -= doDmgPlayerOne(babool, rocks);
+             pTwoHp -= doDmgPlayerOne(babool, rocks);
               this.response.playVideo(/*Play Rocks animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -103,13 +103,13 @@
         }
 
         this.emit(':responseReady');
-},
+}
 
 'Waterblast' : function() {
-        if (secondPlayerChar == klaki && secondPlayerTurn == true){
+        if (secondPlayerChar == klaki && turn == 1){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             pOneHp -= doDmgPlayerTwo(kalki, waterBlast);
+            pOneHp -= doDmgPlayerTwo(klaki, waterBlast);
              this.response.playVideo(/*Plays the Waterblast attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -118,9 +118,9 @@
         }
     
 
-        if (firstPlayerChar == klaki && firstPlayerTurn == true){
+        if (firstPlayerChar == klaki && turn == 0){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              pTwoHp -= doDmgPlayerOne(klaki, waterBlast);
+             pTwoHp -= doDmgPlayerOne(klaki, waterBlast);
               this.response.playVideo(/*Play Waterblast animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -129,13 +129,13 @@
         }
 
         this.emit(':responseReady');
-},
+}
 
 'IceSpin' : function() {
-        if (secondPlayerChar == klaki && secondPlayerTurn == true){
+        if (secondPlayerChar == klaki && turn == 1){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             pOneHp -= doDmgPlayerTwo(klaki, iceSpin);
+            pOneHp -= doDmgPlayerTwo(klaki, iceSpin);
              this.response.playVideo(/*Plays the IceSpin attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -144,7 +144,7 @@
         }
     
 
-        if (firstPlayerChar == klaki && firstPlayerTurn == true){
+        if (firstPlayerChar == klaki && turn == 0){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
               pTwoHp -= doDmgPlayerOne(klaki, iceSpin);
               this.response.playVideo(/*Play IceSpin animation (Left side)*/);
@@ -155,10 +155,10 @@
         }
 
         this.emit(':responseReady');
-},
+}
 
 'Earthquake' : function() {
-        if (secondPlayerChar == momolt && secondPlayerTurn == true){
+        if (secondPlayerChar == momolt && turn == 1){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
              pOneHp -= doDmgPlayerTwo(momolt, earthquake);
@@ -170,7 +170,7 @@
         }
     
 
-        if (firstPlayerChar == momolt && firstPlayerTurn == true){
+        if (firstPlayerChar == momolt && turn == 0){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
               pTwoHp -= doDmgPlayerOne(momolt, earthquake);
               this.response.playVideo(/*Play Earthquake animation (Left side)*/);
@@ -181,13 +181,13 @@
         }
 
         this.emit(':responseReady');
-},
+}
 
 'Punch' : function() {
-        if (secondPlayerChar == momolt && secondPlayerTurn == true){
+        if (secondPlayerChar == momolt && turn == 1){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             pOneHp -= doDmgPlayerTwo(momolt, punch);
+            pOneHp -= doDmgPlayerTwo(momolt, punch);
              this.response.playVideo(/*Plays the Punch attack animation (Right side)*/);
          } else {
              this.response.speak("The video cannot be played on your device. " +
@@ -196,9 +196,9 @@
         }
     
 
-        if (firstPlayerChar == momolt && firstPlayerTurn == true){
+        if (firstPlayerChar == momolt && turn == 0){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              pTwoHp -= doDmgPlayerOne(momolt, punch);
+             pTwoHp -= doDmgPlayerOne(momolt, punch);
               this.response.playVideo(/*Play Punch animation (Left side)*/);
         } else {
               this.response.speak("The video cannot be played on your device. " +
@@ -207,7 +207,7 @@
         }
 
         this.emit(':responseReady');
-},
+}
 
     function doDmgPlayerOne(pOneElement,pOneMove){
   //fire element character
@@ -248,7 +248,7 @@
         return critChance(dmg);
     }
   }
-},
+}
 
 
 function doDmgPlayerTwo(pTwoElement,pTwoMove){
@@ -291,7 +291,7 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
     }
   }
 
-},
+}
 
   function critChance(dmg){
   var chance = Math.floor(Math.random() * 100) + 1;
@@ -301,4 +301,4 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
   }else{
     return dmg;
   }
-},
+}
