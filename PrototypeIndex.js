@@ -1282,7 +1282,6 @@ else if (firstPlayerChar == klaki){
                     };
 
 }
-}
 else if (firstPlayerChar == momolt ) {
 
   const imageObj = {
