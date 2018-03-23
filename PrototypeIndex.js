@@ -678,7 +678,6 @@ const handlers = {
               "To watch this video, try launching the skill from your echo show device.");
          }
         }
-
         this.emit(':responseReady');
 },
 
@@ -711,8 +710,7 @@ const handlers = {
                     	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                    this.emit(':responseReady');
-                 
+                    this.emit(':responseReady');                
                 }else if(firstPlayerChar == 4){
                     
                 	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
@@ -722,8 +720,7 @@ const handlers = {
                     	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                    this.emit(':responseReady');
-                   
+                    this.emit(':responseReady');                   
                 }
                      //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                      this.emit(':responseReady');
@@ -765,8 +762,7 @@ const handlers = {
                     	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
                     	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
-                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                  
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);                 
                 }
                 
                      
@@ -814,14 +810,10 @@ const handlers = {
                     	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                    this.emit(':responseReady');
-                   
+                    this.emit(':responseReady');                  
                 }
                      //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                      this.emit(':responseReady');
-        
-             
-             
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
@@ -839,13 +831,11 @@ const handlers = {
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
-                
-                
+
                     const imageObj = {
                     	smallImageUrl: 'https://imgs.xkcd.com/comics/standards.png',
                     	largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
                     };
-                
                 if(secondPlayerChar == 1){
                   console.log("secondPlayerChar is 1");
                 	const imageObj = {
@@ -860,18 +850,14 @@ const handlers = {
                     	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
                     	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
-                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                  
-                }
-                
-                     
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);         
+                }   
                      this.emit(':responseReady');
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
          }
         }
-
         this.emit(':responseReady');
 },
 
@@ -886,57 +872,35 @@ const handlers = {
     this.response.playVideo(videoSource, metadata);
         this.emit(':responseReady');
     },
-'clacky_chosen' : function(){
-    // make a differnt intent for each of the characters following this logic!
-    if(pselction == 1){
-       firstPlayerChar = klaki; 
-       pselction = 2;
-       this.emit(':ask',"Player one you chose clacky ,Player two please choose a character!");
-    }else{
-        secondPlayerChar = klaki;
-        turn = 1;
-        this.emit(':ask',"Player two you chose clacky ,Player one choose an attack");
-    }
-},
-
-'varu_chosen' : function(){
-    // make a differnt intent for each of the characters following this logic!
-    if(pselction == 1){
-       firstPlayerChar = varu; 
-       pselction = 2;
-       this.emit(':ask',"Player one you chose Varu ,Player two please choose a character!");
-    }else{
-        secondPlayerChar = varu;
-        turn = 1;
-        this.emit(':ask',"Player two you chose Varu ,Player one choose an attack");
-    }
-},
-
-'momolt_chosen' : function(){
-    // make a differnt intent for each of the characters following this logic!
-    if(pselction == 1){
-       firstPlayerChar = momolt; 
-       pselction = 2;
-       this.emit(':ask',"Player one you chose Momolt ,Player two please choose a character!");
-    }else{
-        secondPlayerChar = momolt;
-        turn = 1;
-        this.emit(':ask',"Player two you chose Momolt ,Player one choose an attack");
-    }
-},
-
-'babool_chosen' : function(){
-    // make a differnt intent for each of the characters following this logic!
-    if(pselction == 1){
-       firstPlayerChar = babool; 
-       pselction = 2;
-       this.emit(':ask',"Player one you chose Babool ,Player two please choose a character!");
-    }else{
-        secondPlayerChar = babool;
-        turn = 1;
-        this.emit(':ask',"Player two you chose Babool ,Player one choose an attack");
-    }
-},
+    'clacky_chosen' : function(){
+        // make a differnt intent for each of the characters following this logic!
+        if(pselection == 1){
+            firstPlayerChar = 4; 
+            pselection = 2;
+           this.emit(':ask',"Player one you chose clacky ,Player two please choose a character!");
+        }else{
+            secondPlayerChar = 4;
+            turn = 1;
+             console.log(turn);
+             console.log(firstPlayerChar);
+            this.emit(':ask',"Player two you chose clacky ,Player one choose an attack");
+            //this.emit('attack_handel');
+        }
+    },
+        'varu_chosen' : function(){
+        // make a differnt intent for each of the characters following this logic!
+        if(pselection == 1){
+            firstPlayerChar = 1; 
+           pselection = 2;
+           this.emit(':ask',"Player one you chose varu ,Player two please choose a character!");
+        }else{
+            secondPlayerChar = 1;
+            console.log(turn);
+            console.log(firstPlayerChar);
+            this.emit(':ask',"Player two you chose varu ,Player one choose an attack");
+            //this.emit('attack_handel');
+        }   
+    },
     'LaunchRequest': function () {
         this.emit(':ask', "Player one, Please select a character!", this.attributes.repromptSpeech);
     },
@@ -1053,7 +1017,6 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
         return critChance(dmg);
     }
   }
-
 }
 
   function critChance(dmg){
@@ -1089,5 +1052,4 @@ function winCondition(string winner){
     }
     this.emit(':responseReady');
    }
-
 }
