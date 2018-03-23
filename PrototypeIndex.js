@@ -90,7 +90,6 @@ const handlers = {
                 const repromptSpeech = "What you want dog";
                  
                 if(firstPlayerChar == 1){
-                        console.log("Hey this is varu");
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
                   const imageObj = {
                       // Change based on attack
@@ -101,6 +100,30 @@ const handlers = {
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attaack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attaack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
@@ -191,6 +214,30 @@ const handlers = {
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
@@ -232,6 +279,30 @@ const handlers = {
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
                       // Change this based on attack
@@ -282,6 +353,30 @@ const handlers = {
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
@@ -323,6 +418,30 @@ const handlers = {
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
                       // Change this based on attack
@@ -371,6 +490,30 @@ const handlers = {
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
@@ -412,6 +555,30 @@ const handlers = {
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
                       // Change this based on attack
@@ -713,6 +880,30 @@ const handlers = {
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
                 	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
@@ -759,6 +950,30 @@ const handlers = {
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if( secondPlayerChar == 4){
                     console.log("scond player is 4");
                 	const imageObj = {
@@ -805,6 +1020,30 @@ const handlers = {
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
                 	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
@@ -854,6 +1093,30 @@ const handlers = {
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                
+                }else if(firstPlayerChar == 2){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
+                }else if(firstPlayerChar == 3){
+                    
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                    // Change this based on attack
+                      smallImageUrl: /**/,
+                      largeImageUrl: /**/
+                    };
+                    // Change this based on attaack
+                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.emit(':responseReady');
                 }else if( secondPlayerChar == 4){
                     console.log("scond player is 4");
                 	const imageObj = {
