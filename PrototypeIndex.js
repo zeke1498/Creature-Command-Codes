@@ -28,7 +28,7 @@ var turn = 1;
 
 //The first player character variable that will store the character chosen (Placeholders)
 var firstPlayerChar;
-var pselction = 1;
+var pselection = 1;
 var secondPlayerChar;
 
 const languageStrings = {
