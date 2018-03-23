@@ -1266,9 +1266,9 @@ else if (firstPlayerChar == klaki){
 
     'momolt_chosen' : function(){
     // make a differnt intent for each of the characters following this logic!
-    if(pselction == 1){
+    if(pselection == 1){
        firstPlayerChar = momolt; 
-       pselction = 2;
+       pselection = 2;
        this.emit(':ask',"Player one you chose Momolt ,Player two please choose a character!");
     }else{
         secondPlayerChar = momolt;
@@ -1311,9 +1311,9 @@ else if (firstPlayerChar == klaki){
 
 'babool_chosen' : function(){
     // make a differnt intent for each of the characters following this logic!
-    if(pselction == 1){
+    if(pselection == 1){
        firstPlayerChar = babool; 
-       pselction = 2;
+       pselection = 2;
        this.emit(':ask',"Player one you chose Babool ,Player two please choose a character!");
     }else{
         secondPlayerChar = babool;
@@ -1350,6 +1350,7 @@ else if (firstPlayerChar == klaki){
                     };
 }
             this.emit(':askWithCard',outputSpeech, repromptSpeech, cardTitle, cardContent, imageObj);
+    }
     },
     'LaunchRequest': function () {
         this.emit(':ask', "Player one, Please select a character!", this.attributes.repromptSpeech);
@@ -1383,10 +1384,10 @@ else if (firstPlayerChar == klaki){
   if(pOneElement == momolt){
     if(pOneMove == "punch"){
       var dmg = Math.floor(Math.random() * (16 - 10 + 1)) + 10;
-        pTwoHp -= critChance(dmg);
+        pOneHp -= critChance(dmg);
     }else if (pOneMove == "earthquake") {
       var dmg = Math.floor(Math.random() * (12 - 10 + 1)) + 10;
-        pTwoHp -= critChance(dmg);
+        pOneHp -= critChance(dmg);
     }
   }
   //water type character
@@ -1394,31 +1395,31 @@ else if (firstPlayerChar == klaki){
     if(pOneMove == "waterBlast"){
       var dmg = Math.floor(Math.random() * (14 - 11 + 1)) + 11;
         //return critChance(dmg);
-        pTwoHp -= critChance(dmg);
+        pOneHp -= critChance(dmg);
     }else if (pOneMove == "iceSpin") {
       var dmg = Math.floor(Math.random() * (9 - 6 + 1)) + 9;
         //return critChance(dmg);
-        pTwoHp -= critChance(dmg);
+        pOneHp -= critChance(dmg);
     }
   }
   if(pOneElement == varu){
     if(pOneMove == "tornado"){
       var dmg = Math.floor(Math.random() * (12 - 9 + 1)) + 12;
         //return critChance(dmg);
-        pTwoHp -= critChance(dmg);
+        pOneHp -= critChance(dmg);
     }else if (pOneMove == "fireball") {
       var dmg = Math.floor(Math.random() * (14 -  8 + 1 )) + 14;
         //return critChance(dmg);
-        pTwoHp -= critChance(dmg);
+        pOneHp -= critChance(dmg);
     }
   }
   if(pOneElement == "babool"){
     if(pOneMove == "rocks"){
       var dmg = Math.floor(Math.random() * (15 - 13 + 1)) + 15;
-        pTwoHp -= critChance(dmg);
+        pOneHp -= critChance(dmg);
     }else if (pOneMove == "waterpump") {
       var dmg = Math.floor(Math.random() * (11 -  8 + 1 )) + 11;
-        pTwoHp -= critChance(dmg);
+        pOneHp -= critChance(dmg);
     }
   }
 }
@@ -1429,10 +1430,10 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
   if(pTwoElement == momolt){
     if(pTwoMove == "punch"){
       var dmg = Math.floor(Math.random() * (16 - 10 + 1)) + 10;
-        pOneHp -= critChance(dmg);
+        pTwoHp -= critChance(dmg);
     }else if (pTwoMove == "earthquake") {
       var dmg = Math.floor(Math.random() * (12 - 10 + 1)) + 10;
-        pOneHp -= critChance(dmg);
+        pTwoHp -= critChance(dmg);
     }
   }
   //water type character
@@ -1440,31 +1441,31 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
     if(pTwoMove == "waterBlast"){
       var dmg = Math.floor(Math.random() * (14 - 11 + 1)) + 11;
         //return critChance(dmg);
-        pOneHp -= critChance(dmg);
+        pTwoHp -= critChance(dmg);
     }else if (pTwoMove == "iceSpin") {
       var dmg = Math.floor(Math.random() * (9 - 6 + 1)) + 9;
         //return critChance(dmg);
-        pOneHp -= critChance(dmg);
+        pTwoHp -= critChance(dmg);
     }
   }
   if(pTwoElement == varu){
     if(pTwoMove =="'tornado"){
       var dmg = Math.floor(Math.random() * (12 - 9 + 1)) + 12;
         //return critChance(dmg);
-        pOneHp -= critChance(dmg);
+        pTwoHp -= critChance(dmg);
     }else if (pTwoMove == "fireball") {
       var dmg = Math.floor(Math.random() * (14 -  8 + 1 )) + 14;
         //return critChance(dmg);
-        pOneHp -= critChance(dmg);
+        pTwoHp -= critChance(dmg);
     }
   }
   if(pTwoElement == "babool"){
     if(pTwoMove == "rocks"){
       var dmg = Math.floor(Math.random() * (15 - 13 + 1)) + 15;
-        pOneHp -= critChance(dmg);
+        pTwoHp -= critChance(dmg);
     }else if (pTwoMove == "waterpump") {
       var dmg = Math.floor(Math.random() * (11 -  8 + 1 )) + 11;
-        pOneHp -= critChance(dmg);
+        pTwoHp -= critChance(dmg);
     }
   }
 
