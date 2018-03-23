@@ -1171,33 +1171,48 @@ const handlers = {
     this.response.playVideo(videoSource, metadata);
         this.emit(':responseReady');
     },
-'clacky_chosen' : function(){
-    // make a differnt intent for each of the characters following this logic!
-    if(pselction == 1){
-       firstPlayerChar = klaki; 
-       pselction = 2;
-       this.emit(':ask',"Player one you chose clacky ,Player two please choose a character!");
-    }else{
-        secondPlayerChar = klaki;
-        turn = 1;
-        this.emit(':ask',"Player two you chose clacky ,Player one choose an attack");
-    }
-},
+    
+   'clacky_chosen' : function(){
+        // make a differnt intent for each of the characters following this logic!
+        if(pselection == 1){
+            firstPlayerChar = 4; 
+            pselection = 2;
+           this.emit(':ask',"Player one you chose clacky ,Player two please choose a character!");
+        }else{
+            secondPlayerChar = 4;
+            turn = 1;
+                const cardTitle = 'CURRENT HP';
+                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+                const imageObj = {
+                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                    };
+            this.emit(':askWithCard',"Player two you chose clacky ,Player one choose an attack", cardTitle, cardContent, imageObj);
 
-'varu_chosen' : function(){
-    // make a differnt intent for each of the characters following this logic!
-    if(pselction == 1){
-       firstPlayerChar = varu; 
-       pselction = 2;
-       this.emit(':ask',"Player one you chose Varu ,Player two please choose a character!");
-    }else{
-        secondPlayerChar = varu;
-        turn = 1;
-        this.emit(':ask',"Player two you chose Varu ,Player one choose an attack");
-    }
-},
 
-'momolt_chosen' : function(){
+            //this.emit('attack_handel');
+        }
+        
+    },
+        'varu_chosen' : function(){
+        // make a differnt intent for each of the characters following this logic!
+        if(pselection == 1){
+            firstPlayerChar = 1; 
+           pselection = 2;
+           this.emit(':ask',"Player one you chose varu ,Player two please choose a character!");
+        }else{
+            secondPlayerChar = 1;
+           const cardTitle = 'CURRENT HP';
+                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+                const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                    };
+            this.emit(':askWithCard',"Player two you chose varu ,Player one choose an attack", cardTitle, cardContent, imageObj);
+      }  
+    },
+
+    'momolt_chosen' : function(){
     // make a differnt intent for each of the characters following this logic!
     if(pselction == 1){
        firstPlayerChar = momolt; 
@@ -1206,7 +1221,13 @@ const handlers = {
     }else{
         secondPlayerChar = momolt;
         turn = 1;
-        this.emit(':ask',"Player two you chose Momolt ,Player one choose an attack");
+                const cardTitle = 'CURRENT HP';
+                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+                const imageObj = {
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
+                    };
+            this.emit(':askWithCard',"Player two you chose momolt ,Player one choose an attack", cardTitle, cardContent, imageObj);
     }
 },
 
@@ -1219,9 +1240,16 @@ const handlers = {
     }else{
         secondPlayerChar = babool;
         turn = 1;
-        this.emit(':ask',"Player two you chose Babool ,Player one choose an attack");
+           const cardTitle = 'CURRENT HP';
+           const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
+           const imageObj = {
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
+                    };
+            this.emit(':askWithCard',"Player two you chose babool ,Player one choose an attack", cardTitle, cardContent, imageObj);
     }
 },
+
     'LaunchRequest': function () {
         this.emit(':ask', "Player one, Please select a character!", this.attributes.repromptSpeech);
     },
