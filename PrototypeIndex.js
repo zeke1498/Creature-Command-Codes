@@ -1185,8 +1185,9 @@ const handlers = {
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = ' ';
+                const imageObj;
                 if (firstPlayerChar == varu) {
-  const imageObj = {
+            imageObj = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
@@ -1194,20 +1195,20 @@ const handlers = {
 }
 else if (firstPlayerChar == momolt ) {
 
-  const imageObj = {
+          imageObj = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };    
 }
 else if (firstPlayerChar == babool){
-    const imageObj = {
+            imageObj = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
     }
 
 else if (firstPlayerChar == klaki){
-  const imageObj = {
+          imageObj = {
                        smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
                        largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
@@ -1231,8 +1232,9 @@ else if (firstPlayerChar == klaki){
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = ' ';
                 const outputSpeech = "Player two you chose varu ,Player one choose an attack"
+                const imageObj;
                 if (firstPlayerChar == varu) {
-  const imageObj = {
+         imageObj = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
@@ -1240,20 +1242,20 @@ else if (firstPlayerChar == klaki){
 }
 else if (firstPlayerChar == momolt ) {
 
-  const imageObj = {
+        imageObj = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };    
 }
 else if (firstPlayerChar == babool){
-    const imageObj = {
+        imageObj = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
     
 }
 else if (firstPlayerChar == klaki){
-  const imageObj = {
+        imageObj = {
                        smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
                        largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
@@ -1275,8 +1277,9 @@ else if (firstPlayerChar == klaki){
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = ' ';
                 const outputSpeech = "Player two you chose momolt ,Player one choose an attack";
+                const imageObj;
                 if (firstPlayerChar == varu) {
-  const imageObj = {
+          imageObj = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
@@ -1284,20 +1287,20 @@ else if (firstPlayerChar == klaki){
 }
 else if (firstPlayerChar == momolt ) {
 
-  const imageObj = {
+          imageObj = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };    
 }
 else if (firstPlayerChar == babool){
-    const imageObj = {
+          imageObj = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
     
 }
 else if (firstPlayerChar == klaki){
-  const imageObj = {
+          imageObj = {
                        smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
                        largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
@@ -1319,28 +1322,29 @@ else if (firstPlayerChar == klaki){
            const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
            const repromptSpeech = ' ';
            const outputSpeech = "Player two you chose babool ,Player one choose an attack";
+           const imageObj;
          if (firstPlayerChar == varu) {
-  const imageObj = {
+        imageObj = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
 }
 else if (firstPlayerChar == momolt ) {
 
-  const imageObj = {
+       imageObj = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };    
 }
 else if (firstPlayerChar == babool){
-    const imageObj = {
+        imageObj = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
     
 }
 else if (firstPlayerChar == klaki){
-  const imageObj = {
+        imageObj = {
                        smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
                        largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
