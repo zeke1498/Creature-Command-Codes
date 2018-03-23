@@ -1471,7 +1471,7 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
     }
   }
   if(pTwoElement == varu){
-    if(pTwoMove =="'tornado"){
+    if(pTwoMove =="tornado"){
       var dmg = Math.floor(Math.random() * (12 - 9 + 1)) + 12;
         //return critChance(dmg);
         pOneHp -= critChance(dmg);
