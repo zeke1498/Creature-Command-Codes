@@ -90,11 +90,11 @@ const handlers = {
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
              doDmgPlayerTwo(varu, 'fireball');
              turn = 1;
-             if (pOneHp <= 0 && pTwoHp > 0)
-             {
-              winCondition("Player 2 Wins!");
-              this.emit(':responseReady');
-             }
+//              if (pOneHp <= 0 && pTwoHp > 0)
+//              {
+//               winCondition("Player 2 Wins!");
+//               this.emit(':responseReady');
+//              }
              const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -157,11 +157,11 @@ const handlers = {
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
                doDmgPlayerOne(varu, 'fireball');
               turn = 2;
-                 if (pTwoHp <= 0 && pOneHp > 0)
-             {
-              winCondition("Player 1 Wins!");
-              this.emit(':responseReady');
-             }
+//                  if (pTwoHp <= 0 && pOneHp > 0)
+//              {
+//               winCondition("Player 1 Wins!");
+//               this.emit(':responseReady');
+//              }
               const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -227,11 +227,11 @@ const handlers = {
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
              doDmgPlayerTwo(varu, 'tornado');
              turn = 1;
-               if (pOneHp <= 0 && pTwoHp > 0)
-             {
-              winCondition("Player 2 Wins!");
-              this.emit(':responseReady');
-             }
+//                if (pOneHp <= 0 && pTwoHp > 0)
+//              {
+//               winCondition("Player 2 Wins!");
+//               this.emit(':responseReady');
+//              }
              const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -295,11 +295,11 @@ const handlers = {
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
                doDmgPlayerOne(varu, 'tornado');
               turn = 2;
-                 if (pTwoHp <= 0 && pOneHp > 0)
-             {
-              winCondition("Player 1 Wins!");
-              this.emit(':responseReady');
-             }
+//                  if (pTwoHp <= 0 && pOneHp > 0)
+//              {
+//               winCondition("Player 1 Wins!");
+//               this.emit(':responseReady');
+//              }
               const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -368,11 +368,11 @@ const handlers = {
           // Change based on element and attack
              doDmgPlayerTwo(momolt, 'earthquake');
              turn = 1;
-               if (pOneHp <= 0 && pTwoHp > 0)
-             {
-              winCondition("Player 2 Wins!");
-              this.emit(':responseReady');
-             }
+//                if (pOneHp <= 0 && pTwoHp > 0)
+//              {
+//               winCondition("Player 2 Wins!");
+//               this.emit(':responseReady');
+//              }
              const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -436,11 +436,11 @@ const handlers = {
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
                doDmgPlayerOne(momolt, 'earthquake');
               turn = 2;
-                 if (pTwoHp <= 0 && pOneHp > 0)
-             {
-              winCondition("Player 1 Wins!");
-              this.emit(':responseReady');
-             }
+//                  if (pTwoHp <= 0 && pOneHp > 0)
+//              {
+//               winCondition("Player 1 Wins!");
+//               this.emit(':responseReady');
+//              }
               const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -507,11 +507,11 @@ const handlers = {
           // Change based on element and attack
              doDmgPlayerTwo(momolt, 'punch');
              turn = 1;
-               if (pOneHp <= 0 && pTwoHp > 0)
-             {
-              winCondition("Player 2 Wins!");
-              this.emit(':responseReady');
-             }
+//                if (pOneHp <= 0 && pTwoHp > 0)
+//              {
+//               winCondition("Player 2 Wins!");
+//               this.emit(':responseReady');
+//              }
              const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -575,11 +575,11 @@ const handlers = {
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
                doDmgPlayerOne(momolt, 'punch');
               turn = 2;
-                 if (pTwoHp <= 0 && pOneHp > 0)
-             {
-              winCondition("Player 1 Wins!");
-              this.emit(':responseReady');
-             }
+//                  if (pTwoHp <= 0 && pOneHp > 0)
+//              {
+//               winCondition("Player 1 Wins!");
+//               this.emit(':responseReady');
+//              }
               const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -647,11 +647,11 @@ const handlers = {
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
             doDmgPlayerTwo(babool, "waterpump");
              turn = 1;
-              if (pOneHp <= 0 && pTwoHp > 0)
-             {
-              winCondition("Player 2 Wins!");
-              this.emit(':responseReady');
-             }
+//               if (pOneHp <= 0 && pTwoHp > 0)
+//              {
+//               winCondition("Player 2 Wins!");
+//               this.emit(':responseReady');
+//              }
             const cardTitle = 'CURRENT HP';
             const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
             const repromptSpeech = "What you want dog";
@@ -708,11 +708,11 @@ const handlers = {
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
               doDmgPlayerOne(babool, "waterpump");
               turn = 2;
-                if (pTwoHp <= 0 && pOneHp > 0)
-             {
-              winCondition("Player 1 Wins!");
-              this.emit(':responseReady');
-             }
+//                 if (pTwoHp <= 0 && pOneHp > 0)
+//              {
+//               winCondition("Player 1 Wins!");
+//               this.emit(':responseReady');
+//              }
               turn = 2;
               const cardTitle = 'CURRENT HP';
               const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -773,11 +773,11 @@ const handlers = {
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
             doDmgPlayerTwo(babool, "rocks");
              turn = 1;
-              if (pOneHp <= 0 && pTwoHp > 0)
-             {
-              winCondition("Player 2 Wins!");
-              this.emit(':responseReady');
-             }
+//               if (pOneHp <= 0 && pTwoHp > 0)
+//              {
+//               winCondition("Player 2 Wins!");
+//               this.emit(':responseReady');
+//              }
             const cardTitle = 'CURRENT HP';
             const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
             const repromptSpeech = "What you want dog";
@@ -833,11 +833,11 @@ const handlers = {
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
               doDmgPlayerOne(babool, 'waterpump');
               turn = 2;
-                if (pTwoHp <= 0 && pOneHp > 0)
-             {
-              winCondition("Player 1 Wins!");
-              this.emit(':responseReady');
-             }
+//                 if (pTwoHp <= 0 && pOneHp > 0)
+//              {
+//               winCondition("Player 1 Wins!");
+//               this.emit(':responseReady');
+//              }
               const cardTitle = 'CURRENT HP';
               const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
               const repromptSpeech = "What you want dog";
@@ -905,11 +905,11 @@ const handlers = {
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
              doDmgPlayerTwo(klaki, 'waterBlast');
-               if (pOneHp <= 0 && pTwoHp > 0)
-             {
-              winCondition("Player 2 Wins!");
-              this.emit(':responseReady');
-             }
+//                if (pOneHp <= 0 && pTwoHp > 0)
+//              {
+//               winCondition("Player 2 Wins!");
+//               this.emit(':responseReady');
+//              }
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -970,11 +970,11 @@ const handlers = {
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
              doDmgPlayerOne(klaki, 'waterBlast');
               turn = 2;
-               if (pTwoHp <= 0 && pOneHp > 0)
-             {
-              winCondition("Player 1 Wins!");
-              this.emit(':responseReady');
-             }
+//                if (pTwoHp <= 0 && pOneHp > 0)
+//              {
+//               winCondition("Player 1 Wins!");
+//               this.emit(':responseReady');
+//              }
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -1045,11 +1045,11 @@ const handlers = {
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
              doDmgPlayerTwo(klaki, 'iceSpin');
              turn = 1;
-               if (pOneHp <= 0 && pTwoHp > 0)
-             {
-              winCondition("Player 2 Wins!");
-              this.emit(':responseReady');
-             }
+//                if (pOneHp <= 0 && pTwoHp > 0)
+//              {
+//               winCondition("Player 2 Wins!");
+//               this.emit(':responseReady');
+//              }
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -1113,11 +1113,11 @@ const handlers = {
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
                doDmgPlayerOne(klaki, 'iceSpin');
               turn = 2;
-                 if (pTwoHp <= 0 && pOneHp > 0)
-             {
-              winCondition("Player 1 Wins!");
-              this.emit(':responseReady');
-             }
+//                  if (pTwoHp <= 0 && pOneHp > 0)
+//              {
+//               winCondition("Player 1 Wins!");
+//               this.emit(':responseReady');
+//              }
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
