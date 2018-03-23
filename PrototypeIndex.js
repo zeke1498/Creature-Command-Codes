@@ -97,7 +97,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
                 }else if(firstPlayerChar == 2){
@@ -110,7 +110,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 3){
                     
@@ -122,7 +122,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
@@ -134,7 +134,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }
                      //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
@@ -162,7 +162,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
                 }if(secondPlayerChar == 2){
@@ -184,7 +184,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
                 }else if(secondPlayerChar == 4){
@@ -233,7 +233,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
                 }else if(firstPlayerChar == 2){
@@ -246,7 +246,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 3){
                     
@@ -258,7 +258,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
@@ -270,7 +270,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }
                      //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
@@ -298,7 +298,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
                 }else if(secondPlayerChar == 2){
@@ -323,7 +323,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
@@ -333,7 +333,7 @@ const handlers = {
                   
                     };
                     // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                 }
                      
@@ -1361,7 +1361,7 @@ exports.handler = function (event, context) {
     alexa.execute();
 };
 
-function winCondition(string winner){
+function winCondition(winner){
   //pOneHp
   //pTwoHp
      const cardTitle = winner;
@@ -1375,4 +1375,3 @@ function winCondition(string winner){
     this.emit(':responseReady');
    }
 
-}
