@@ -1185,7 +1185,7 @@ const handlers = {
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = ' ';
-                const imageObj;
+                var imageObj;
                 if (firstPlayerChar == varu) {
             imageObj = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
@@ -1232,7 +1232,7 @@ else if (firstPlayerChar == klaki){
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = ' ';
                 const outputSpeech = "Player two you chose varu ,Player one choose an attack"
-                const imageObj;
+                var imageObj;
                 if (firstPlayerChar == varu) {
          imageObj = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
@@ -1277,7 +1277,7 @@ else if (firstPlayerChar == klaki){
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = ' ';
                 const outputSpeech = "Player two you chose momolt ,Player one choose an attack";
-                const imageObj;
+                var imageObj;
                 if (firstPlayerChar == varu) {
           imageObj = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
@@ -1322,7 +1322,7 @@ else if (firstPlayerChar == klaki){
            const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
            const repromptSpeech = ' ';
            const outputSpeech = "Player two you chose babool ,Player one choose an attack";
-           const imageObj;
+           var imageObj;
          if (firstPlayerChar == varu) {
         imageObj = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
