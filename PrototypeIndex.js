@@ -446,8 +446,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
