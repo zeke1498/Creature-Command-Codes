@@ -3,10 +3,11 @@
     if(pselction == 1){
        firstPlayerChar = klaki; 
        pselction = 2;
-       this.emit(':ask',"Player one you chose Klaki ,Player two please choose a character!");
+       this.emit(':ask',"Player one you chose clacky ,Player two please choose a character!");
     }else{
         secondPlayerChar = klaki;
-        this.emit('attack_handel');
+        turn = 1;
+        this.emit(':ask',"Player two you chose clacky ,Player one choose an attack");
     }
 },
 
@@ -18,7 +19,8 @@
        this.emit(':ask',"Player one you chose Varu ,Player two please choose a character!");
     }else{
         secondPlayerChar = varu;
-        this.emit('attack_handel');
+        turn = 1;
+        this.emit(':ask',"Player two you chose Varu ,Player one choose an attack");
     }
 },
 
@@ -30,7 +32,8 @@
        this.emit(':ask',"Player one you chose Momolt ,Player two please choose a character!");
     }else{
         secondPlayerChar = momolt;
-        this.emit('attack_handel');
+        turn = 1;
+        this.emit(':ask',"Player two you chose Momolt ,Player one choose an attack");
     }
 },
 
@@ -42,6 +45,7 @@
        this.emit(':ask',"Player one you chose Babool ,Player two please choose a character!");
     }else{
         secondPlayerChar = babool;
-        this.emit('attack_handel');
+        turn = 1;
+        this.emit(':ask',"Player two you chose Babool ,Player one choose an attack");
     }
 },
