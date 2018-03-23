@@ -53,6 +53,15 @@ const languageStrings = {
 
 const handlers = {
   //displays health for players after attacks are done.
+    'resetIntent' : function()
+{
+  firstPlayerChar = null;
+  secondPlayerChar = null;
+  pselection = 1;
+  turn = 1;
+  pOneHp = 50;
+  pTwoHp = 50;
+},
     'PlayVideoIntent' : function() {
     const cardTitle = 'CURRENT HP';
     const cardContent = 'PLayer1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -97,7 +106,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
-                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
                 }else if(firstPlayerChar == 2){
@@ -110,7 +119,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 3){
                     
@@ -122,7 +131,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
@@ -134,7 +143,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }
                      //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
@@ -162,7 +171,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
                 }if(secondPlayerChar == 2){
@@ -184,7 +193,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Fireball_Ver_Three_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
                 }else if(secondPlayerChar == 4){
@@ -233,7 +242,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
-                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruTornadoP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
                 }else if(firstPlayerChar == 2){
@@ -246,7 +255,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruTornadoP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 3){
                     
@@ -258,7 +267,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruTornadoP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
@@ -270,7 +279,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruTornadoP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }
                      //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
@@ -298,7 +307,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruTornadoP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
                 }else if(secondPlayerChar == 2){
@@ -323,7 +332,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruTornadoP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
@@ -333,7 +342,7 @@ const handlers = {
                   
                     };
                     // Change this based on attack
-                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4").cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruTornadoP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                 }
                      
@@ -372,7 +381,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltEarthP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
                 }else if(firstPlayerChar == 2){
@@ -385,7 +394,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltEarthP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 3){
                     
@@ -397,7 +406,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltEarthP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
@@ -409,7 +418,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltEarthP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }
                      //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
@@ -437,7 +446,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltEarthP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
                 }else if(secondPlayerChar == 2){
@@ -450,7 +459,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltEarthP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 3){
                     
@@ -462,7 +471,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltEarthP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
@@ -472,7 +481,7 @@ const handlers = {
                   
                     };
                     // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltEarthP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                 }
                      
@@ -509,7 +518,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltPunchp1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
                 }else if(firstPlayerChar == 2){
@@ -522,7 +531,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltPunchp1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 3){
                     
@@ -534,7 +543,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltPunchp1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
@@ -546,7 +555,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltPunchp1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }
                      //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
@@ -574,7 +583,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltPunchp1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                
                 }else if(secondPlayerChar == 2){
@@ -587,7 +596,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltPunchp1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 3){
                     
@@ -599,7 +608,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltPunchp1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
@@ -609,7 +618,7 @@ const handlers = {
                   
                     };
                     // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/MomoltPunchp1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                 }
                      
@@ -644,7 +653,7 @@ const handlers = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
-                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Babool_Water_Blast(Still+Rough).mp4').cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
                 }else if(secondPlayerChar == 2){
@@ -655,7 +664,7 @@ const handlers = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
-                   this.response.playVideo(/*momolt attack animation*/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Babool_Water_Blast(Still+Rough).mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 3){
                     
@@ -665,7 +674,7 @@ const handlers = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
-                   this.response.playVideo(/*babool attack animation*/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Babool_Water_Blast(Still+Rough).mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 4){
                     
@@ -704,7 +713,7 @@ const handlers = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
-                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Babool_Water_Blast(Still+Rough).mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
                 }else if(secondPlayerChar == 2){
@@ -738,7 +747,7 @@ const handlers = {
                    //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }
-              this.response.playVideo(/*Play Waterpump animation (Left side)*/);
+              this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Babool_Water_Blast(Still+Rough).mp4");
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -767,7 +776,7 @@ const handlers = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
-                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Babool_Psychic(Still_Rough).mp4').cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
                 }else if(firstPlayerChar == 2){
@@ -788,7 +797,7 @@ const handlers = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
-                   this.response.playVideo(/*babool attack animation*/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Babool_Psychic(Still_Rough).mp4').cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
@@ -838,7 +847,7 @@ const handlers = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
-                   this.response.playVideo(/*momolt attack animation*/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Babool_Psychic(Still_Rough).mp4').cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 3){
                     
@@ -848,7 +857,7 @@ const handlers = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
-                   this.response.playVideo(/*babool attack animation*/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Babool_Psychic(Still_Rough).mp4').cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 4){
                     
@@ -861,7 +870,7 @@ const handlers = {
                    //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }
-              this.response.playVideo(/*Play Waterpump animation (Left side)*/);
+              this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Babool_Psychic(Still_Rough).mp4');
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -912,7 +921,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/KlakiWaterP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 3){
                     
@@ -934,7 +943,7 @@ const handlers = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
-                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/KlakiWaterP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                    
                 }
@@ -970,7 +979,7 @@ const handlers = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
-                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/KlakiWaterP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                
                 }else if(secondPlayerChar == 2){
                     
@@ -982,7 +991,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/KlakiWaterP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 3){
                     
@@ -994,7 +1003,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/KlakiWaterP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if( secondPlayerChar == 4){
                     console.log("scond player is 4");
@@ -1039,7 +1048,7 @@ const handlers = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
-                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
+                    this.response.playVideo('https://s3.amazonaws.com/creaturecommand/KlakiIceP1.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
                  
                 }else if(firstPlayerChar == 2){
@@ -1052,7 +1061,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo('https://s3.amazonaws.com/creaturecommand/KlakiIceP1.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 3){
                     
@@ -1064,7 +1073,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo('https://s3.amazonaws.com/creaturecommand/KlakiIceP1.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
@@ -1125,7 +1134,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo('https://s3.amazonaws.com/creaturecommand/KlakiIceP1.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 3){
                     
@@ -1137,7 +1146,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo('https://s3.amazonaws.com/creaturecommand/KlakiIceP1.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if( secondPlayerChar == 4){
                     console.log("scond player is 4");
@@ -1364,9 +1373,11 @@ else if (firstPlayerChar == klaki){
         this.emit(':ask', this.attributes.speechOutput, this.attributes.repromptSpeech);
     },
     'AMAZON.StopIntent': function () {
+        reset();
         this.emit('SessionEndedRequest');
     },
     'AMAZON.CancelIntent': function () {
+        reset();
         this.emit('SessionEndedRequest');
     },
     'SessionEndedRequest': function () {
@@ -1480,6 +1491,16 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
     return dmg;
   }
   }
+  
+  function reset()
+{
+  firstPlayerChar = null;
+  secondPlayerChar = null;
+  pselection = 1;
+  turn = 1;
+  pOneHp = 50;
+  pTwoHp = 50;
+}
 
 
 exports.handler = function (event, context) {
