@@ -1186,9 +1186,30 @@ const handlers = {
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = ' ';
                 const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                    };
+}
+else if (firstPlayerChar == momolt ) {
+
+  const imageObj = {
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
+                    };    
+}
+else if (firstPlayerChar == babool){
+    const imageObj = {
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
+                    };
+    }
+}
+else if (firstPlayerChar == klaki){
+  const imageObj = {
                        smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
                        largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
+}
             this.emit(':askWithCard',outputSpeech, repromptSpeech, cardTitle, cardContent, imageObj);
 
 
@@ -1212,6 +1233,27 @@ const handlers = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
+}
+else if (firstPlayerChar == momolt ) {
+
+  const imageObj = {
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
+                    };    
+}
+else if (firstPlayerChar == babool){
+    const imageObj = {
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
+                    };
+    }
+}
+else if (firstPlayerChar == klaki){
+  const imageObj = {
+                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                    };
+}
             this.emit(':askWithCard',outputSpeech, repromptSpeech, cardTitle, cardContent, imageObj);
       }  
     },
@@ -1230,9 +1272,30 @@ const handlers = {
                 const repromptSpeech = ' ';
                 const outputSpeech = "Player two you chose momolt ,Player one choose an attack";
                 const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                    };
+}
+else if (firstPlayerChar == momolt ) {
+
+  const imageObj = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
+                    };    
+}
+else if (firstPlayerChar == babool){
+    const imageObj = {
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
+    }
+}
+else if (firstPlayerChar == klaki){
+  const imageObj = {
+                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                    };
+}
             this.emit(':askWithCard',outputSpeech, repromptSpeech, cardTitle, cardContent, imageObj);
     }
 },
@@ -1250,14 +1313,34 @@ const handlers = {
            const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
            const repromptSpeech = ' ';
            const outputSpeech = "Player two you chose babool ,Player one choose an attack";
-           const imageObj = {
+         if (firstPlayerChar == varu) {
+  const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                    };
+}
+else if (firstPlayerChar == momolt ) {
+
+  const imageObj = {
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
+                    };    
+}
+else if (firstPlayerChar == babool){
+    const imageObj = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
-            this.emit(':askWithCard',outputSpeech, repromptSpeech, cardTitle, cardContent, imageObj);
     }
-},
-
+}
+else if (firstPlayerChar == klaki){
+  const imageObj = {
+                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                    };
+}
+            this.emit(':askWithCard',outputSpeech, repromptSpeech, cardTitle, cardContent, imageObj);
+    },
     'LaunchRequest': function () {
         this.emit(':ask', "Player one, Please select a character!", this.attributes.repromptSpeech);
     },
