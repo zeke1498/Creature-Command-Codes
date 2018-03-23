@@ -79,7 +79,7 @@ const handlers = {
   if (secondPlayerChar == varu && turn == 2){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerOne(varu, 'fireball');
+             doDmgPlayerTwo(varu, 'fireball');
              if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
@@ -145,7 +145,7 @@ const handlers = {
          }
         }else if (firstPlayerChar == varu && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-               doDmgPlayerTwo(varu, 'fireball');
+               doDmgPlayerOne(varu, 'fireball');
                  if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
@@ -214,7 +214,7 @@ const handlers = {
   if (secondPlayerChar == varu && turn == 2){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerOne(varu, 'tornado');
+             doDmgPlayerTwo(varu, 'tornado');
                if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
@@ -281,7 +281,7 @@ const handlers = {
          }
         }else if (firstPlayerChar == varu && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-               doDmgPlayerTwo(varu, 'tornado');
+               doDmgPlayerOne(varu, 'tornado');
                  if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
@@ -353,7 +353,7 @@ const handlers = {
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
           // Change based on element and attack
-             doDmgPlayerOne(momolt, 'earthquake');
+             doDmgPlayerTwo(momolt, 'earthquake');
                if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
@@ -420,7 +420,7 @@ const handlers = {
          }
         }else if (firstPlayerChar == momolt && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-               doDmgPlayerTwo(momolt, 'earthquake');
+               doDmgPlayerOne(momolt, 'earthquake');
                  if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
@@ -490,7 +490,7 @@ const handlers = {
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
           // Change based on element and attack
-             doDmgPlayerOne(momolt, 'punch');
+             doDmgPlayerTwo(momolt, 'punch');
                if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
@@ -557,7 +557,7 @@ const handlers = {
          }
         }else if (firstPlayerChar == momolt && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-               doDmgPlayerTwo(momolt, 'punch');
+               doDmgPlayerOne(momolt, 'punch');
                  if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
@@ -628,7 +628,7 @@ const handlers = {
         if (secondPlayerChar == babool && turn == 2){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-            doDmgPlayerOne(babool, waterpump);
+            doDmgPlayerTwo(babool, waterpump);
               if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
@@ -688,7 +688,7 @@ const handlers = {
       
         if (firstPlayerChar == babool && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerTwo(babool, waterpump);
+              doDmgPlayerOne(babool, waterpump);
                 if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
@@ -752,7 +752,7 @@ const handlers = {
         if (secondPlayerChar == babool && turn == 2){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-            doDmgPlayerOne(babool, rocks);
+            doDmgPlayerTwo(babool, rocks);
               if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
@@ -811,7 +811,7 @@ const handlers = {
 
         if (firstPlayerChar == babool && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerTwo(babool, waterpump);
+              doDmgPlayerOne(babool, waterpump);
                 if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
@@ -883,7 +883,7 @@ const handlers = {
             turn = 1;
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerOne(klaki, 'waterBlast');
+             doDmgPlayerTwo(klaki, 'waterBlast');
                if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
@@ -947,7 +947,7 @@ const handlers = {
         }else if (firstPlayerChar == klaki && turn == 1){
             console.log("THIS IS TRUE PLAYER ONE!!!!!!!");
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerTwo(klaki, 'waterBlast');
+             doDmgPlayerOne(klaki, 'waterBlast');
                if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
@@ -1022,7 +1022,7 @@ const handlers = {
         if (secondPlayerChar == klaki && turn == 2){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-             doDmgPlayerOne(klaki, 'iceSpin');
+             doDmgPlayerTwo(klaki, 'iceSpin');
                if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
@@ -1090,7 +1090,7 @@ const handlers = {
         }
     else if (firstPlayerChar == klaki && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-               doDmgPlayerTwo(klaki, 'iceSpin');
+               doDmgPlayerOne(klaki, 'iceSpin');
                  if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
