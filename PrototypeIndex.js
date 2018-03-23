@@ -58,7 +58,7 @@ const handlers = {
     const cardContent = 'PLayer1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
     const repromptSpeech = "What you want dog";
     const imageObj = {
-    	largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
+      largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
     };
 
     // VideoApp.Play directives can be added to the response
@@ -894,10 +894,10 @@ const handlers = {
                 const repromptSpeech = "What you want dog";
                 if(firstPlayerChar == 1){
 
-                	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
-                	const imageObj = {
-                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
-                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
+                  const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
@@ -928,11 +928,11 @@ const handlers = {
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
-                	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
-                	
-                	const imageObj = {
-                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
-                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
@@ -960,15 +960,15 @@ const handlers = {
                 
                 
                     const imageObj = {
-                    	smallImageUrl: 'https://imgs.xkcd.com/comics/standards.png',
-                    	largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
+                      smallImageUrl: 'https://imgs.xkcd.com/comics/standards.png',
+                      largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
                     };
                 
                 if(secondPlayerChar == 1){
                   console.log("secondPlayerChar is 1");
-                	const imageObj = {
-                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
-                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                  const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                
@@ -998,9 +998,9 @@ const handlers = {
                    this.emit(':responseReady');
                 }else if( secondPlayerChar == 4){
                     console.log("scond player is 4");
-                	const imageObj = {
-                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
-                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                  const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                   
@@ -1034,10 +1034,10 @@ const handlers = {
                 const repromptSpeech = "What you want dog";
                 if(firstPlayerChar == 1){
 
-                	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
-                	const imageObj = {
-                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
-                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
+                  const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
@@ -1068,11 +1068,11 @@ const handlers = {
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
-                	//largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
-                	
-                	const imageObj = {
-                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
-                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                  //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
+                  
+                  const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                     this.emit(':responseReady');
@@ -1103,15 +1103,15 @@ const handlers = {
                 
                 
                     const imageObj = {
-                    	smallImageUrl: 'https://imgs.xkcd.com/comics/standards.png',
-                    	largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
+                      smallImageUrl: 'https://imgs.xkcd.com/comics/standards.png',
+                      largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
                     };
                 
                 if(secondPlayerChar == 1){
                   console.log("secondPlayerChar is 1");
-                	const imageObj = {
-                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
-                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
+                  const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                
@@ -1141,9 +1141,9 @@ const handlers = {
                    this.emit(':responseReady');
                 }else if( secondPlayerChar == 4){
                     console.log("scond player is 4");
-                	const imageObj = {
-                    	smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
-                    	largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
+                  const imageObj = {
+                      smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
+                      largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg'
                     };
                     this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki+spin+attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
                   
@@ -1165,8 +1165,8 @@ const handlers = {
         //this.response.playVideo('http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4');
     const videoSource = 'https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4';
     const metadata = {
-    	'title': 'Title for Sample Video',
-    	'subtitle': 'Secondary Title for Sample Video'
+      'title': 'Title for Sample Video',
+      'subtitle': 'Secondary Title for Sample Video'
     };
     this.response.playVideo(videoSource, metadata);
         this.emit(':responseReady');
@@ -1203,7 +1203,7 @@ else if (firstPlayerChar == babool){
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
     }
-}
+
 else if (firstPlayerChar == klaki){
   const imageObj = {
                        smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg',
