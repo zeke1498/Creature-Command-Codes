@@ -93,7 +93,7 @@ const handlers = {
              if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
              const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -160,7 +160,7 @@ const handlers = {
                  if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
               const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -230,7 +230,7 @@ const handlers = {
                if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
              const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -298,7 +298,7 @@ const handlers = {
                  if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
               const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -371,7 +371,7 @@ const handlers = {
                if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
              const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -439,7 +439,7 @@ const handlers = {
                  if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
               const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -510,7 +510,7 @@ const handlers = {
                if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
              const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -578,7 +578,7 @@ const handlers = {
                  if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
               const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -650,7 +650,7 @@ const handlers = {
               if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
             const cardTitle = 'CURRENT HP';
             const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -711,7 +711,7 @@ const handlers = {
                 if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
               turn = 2;
               const cardTitle = 'CURRENT HP';
@@ -776,7 +776,7 @@ const handlers = {
               if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
             const cardTitle = 'CURRENT HP';
             const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -836,7 +836,7 @@ const handlers = {
                 if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
               const cardTitle = 'CURRENT HP';
               const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -907,7 +907,7 @@ const handlers = {
                if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -972,7 +972,7 @@ const handlers = {
                if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -1047,7 +1047,7 @@ const handlers = {
                if (pOneHp <= 0 && pTwoHp > 0)
              {
               winCondition("Player 2 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
@@ -1115,7 +1115,7 @@ const handlers = {
                  if (pTwoHp <= 0 && pOneHp > 0)
              {
               winCondition("Player 1 Wins!");
-              this.emit(':responseReady')
+              this.emit(':responseReady');
              }
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
