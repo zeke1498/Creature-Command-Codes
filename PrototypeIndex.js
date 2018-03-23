@@ -1185,10 +1185,12 @@ const handlers = {
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = ' ';
-                const imageObj = {
+                if (firstPlayerChar == varu) {
+  const imageObj = {
                       smallImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg',
                       largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg'
                     };
+
 }
 else if (firstPlayerChar == momolt ) {
 
@@ -1246,7 +1248,7 @@ else if (firstPlayerChar == babool){
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
-    }
+    
 }
 else if (firstPlayerChar == klaki){
   const imageObj = {
@@ -1288,7 +1290,7 @@ else if (firstPlayerChar == babool){
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
-    }
+    
 }
 else if (firstPlayerChar == klaki){
   const imageObj = {
@@ -1331,7 +1333,7 @@ else if (firstPlayerChar == babool){
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
-    }
+    
 }
 else if (firstPlayerChar == klaki){
   const imageObj = {
