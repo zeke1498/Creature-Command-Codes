@@ -645,7 +645,7 @@ const handlers = {
         if (secondPlayerChar == babool && turn == 2){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-            doDmgPlayerTwo(babool, waterpump);
+            doDmgPlayerTwo(babool, "waterpump");
              turn = 1;
               if (pOneHp <= 0 && pTwoHp > 0)
              {
@@ -706,7 +706,7 @@ const handlers = {
       
         if (firstPlayerChar == babool && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerOne(babool, waterpump);
+              doDmgPlayerOne(babool, "waterpump");
               turn = 2;
                 if (pTwoHp <= 0 && pOneHp > 0)
              {
@@ -734,7 +734,7 @@ const handlers = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
-                   this.response.playVideo(/*momolt attack animation*/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Babool_Water_Blast(Still+Rough).mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 3){
                     
@@ -744,7 +744,7 @@ const handlers = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
-                   this.response.playVideo(/*babool attack animation*/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Babool_Water_Blast(Still+Rough).mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 4){
                     
@@ -771,7 +771,7 @@ const handlers = {
         if (secondPlayerChar == babool && turn == 2){
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-            doDmgPlayerTwo(babool, rocks);
+            doDmgPlayerTwo(babool, "rocks");
              turn = 1;
               if (pOneHp <= 0 && pTwoHp > 0)
              {
@@ -798,7 +798,7 @@ const handlers = {
                       smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
-                   this.response.playVideo(/*momolt attack animation*/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Babool_Psychic(Still_Rough).mp4').cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 3){
                     
@@ -831,7 +831,7 @@ const handlers = {
 
         if (firstPlayerChar == babool && turn == 1){
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-              doDmgPlayerOne(babool, waterpump);
+              doDmgPlayerOne(babool, 'waterpump');
               turn = 2;
                 if (pTwoHp <= 0 && pOneHp > 0)
              {
@@ -882,6 +882,7 @@ const handlers = {
                    this.emit(':responseReady');
                 }
               this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Babool_Psychic(Still_Rough).mp4');
+              this.emit(':responseReady');
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -944,7 +945,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/KlakiWaterP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(firstPlayerChar == 4){
                     
@@ -1435,7 +1436,7 @@ else if (firstPlayerChar == klaki){
         pTwoHp -= critChance(dmg);
     }
   }
-  if(pOneElement == "babool"){
+  if(pOneElement == babool){
     if(pOneMove == "rocks"){
       var dmg = Math.floor(Math.random() * (15 - 13 + 1)) + 15;
         pTwoHp -= critChance(dmg);
@@ -1481,7 +1482,7 @@ function doDmgPlayerTwo(pTwoElement,pTwoMove){
         pOneHp -= critChance(dmg);
     }
   }
-  if(pTwoElement == "babool"){
+  if(pTwoElement == babool){
     if(pTwoMove == "rocks"){
       var dmg = Math.floor(Math.random() * (15 - 13 + 1)) + 15;
         pOneHp -= critChance(dmg);
