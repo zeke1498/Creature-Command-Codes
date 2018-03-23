@@ -93,8 +93,8 @@ const handlers = {
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
                   const imageObj = {
                       // Change based on attack
-                      smallImageUrl: /**/
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -106,8 +106,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attaack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -118,8 +118,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attaack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -130,8 +130,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attaack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -158,8 +158,8 @@ const handlers = {
                
                     const imageObj = {
                       // Change this based on attack 
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -169,8 +169,8 @@ const handlers = {
                
                     const imageObj = {
                       // Change this based on attack 
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                       // Change this based on attack
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -180,8 +180,8 @@ const handlers = {
                
                     const imageObj = {
                       // Change this based on attack 
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                       // Change this based on attack
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -190,8 +190,8 @@ const handlers = {
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
                       // Change this based on attack
-                          smallImageUrl: /**/,
-                          largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                   
                     };
                     // Change this based on attack
@@ -229,8 +229,8 @@ const handlers = {
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
                   const imageObj = {
                       // Change based on attack
-                      smallImageUrl: /**/
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -242,8 +242,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -254,8 +254,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -266,8 +266,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -294,8 +294,8 @@ const handlers = {
                
                     const imageObj = {
                       // Change this based on attack 
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -307,8 +307,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -319,8 +319,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -328,8 +328,8 @@ const handlers = {
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
                       // Change this based on attack
-                          smallImageUrl: /**/,
-                          largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                   
                     };
                     // Change this based on attack
@@ -368,8 +368,8 @@ const handlers = {
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
                   const imageObj = {
                       // Change based on attack
-                      smallImageUrl: /**/
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -381,8 +381,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -393,8 +393,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -405,8 +405,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attaack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -433,8 +433,8 @@ const handlers = {
                
                     const imageObj = {
                       // Change this based on attack 
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -458,8 +458,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -467,8 +467,8 @@ const handlers = {
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
                       // Change this based on attack
-                          smallImageUrl: /**/,
-                          largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                   
                     };
                     // Change this based on attack
@@ -505,8 +505,8 @@ const handlers = {
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg';
                   const imageObj = {
                       // Change based on attack
-                      smallImageUrl: /**/
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -518,8 +518,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -530,8 +530,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -542,8 +542,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attaack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -570,8 +570,8 @@ const handlers = {
                
                     const imageObj = {
                       // Change this based on attack 
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
                     this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -583,8 +583,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -595,8 +595,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -604,8 +604,8 @@ const handlers = {
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
                       // Change this based on attack
-                          smallImageUrl: /**/,
-                          largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                   
                     };
                     // Change this based on attack
@@ -835,8 +835,8 @@ const handlers = {
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
                   
                   const imageObj = {
-                      smallImageUrl: /*character select screen momolt*/,
-                      largeImageUrl: /*character select screen momolt*/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                    this.response.playVideo(/*momolt attack animation*/).cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
@@ -908,8 +908,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -920,8 +920,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -978,8 +978,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -990,8 +990,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -1048,8 +1048,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -1060,8 +1060,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -1121,8 +1121,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
@@ -1133,8 +1133,8 @@ const handlers = {
                   
                   const imageObj = {
                     // Change this based on attack
-                      smallImageUrl: /**/,
-                      largeImageUrl: /**/
+                      smallImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg",
+                      largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
