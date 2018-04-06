@@ -21,6 +21,7 @@ const momolt = 2;
 const babool = 3;
 var klaki = 4;
 
+var crit = 1.5;
 var pOneHp = 50;
 var pTwoHp = 50;
 
@@ -53,8 +54,7 @@ const languageStrings = {
 
 const handlers = {
   //displays health for players after attacks are done.
-    'resetIntent' : function()
-{
+    'resetIntent' : function(){
   firstPlayerChar = null;
   secondPlayerChar = null;
   pselection = 1;
@@ -107,8 +107,8 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                     // Change this based on attack
-                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
-                    this.emit(':responseReady');
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4");
+                    this.emit(':askWithCard', "choose and attack", repromptSpeech, cardTitle, cardContent, imageObj);
                  
                 }else if(firstPlayerChar == 2){
                     
@@ -120,8 +120,8 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
-                   this.emit(':responseReady');
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4");
+                   this.emit(':askWithCard', "choose and attack", repromptSpeech, cardTitle, cardContent, imageObj);
                 }else if(firstPlayerChar == 3){
                     
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
@@ -132,8 +132,8 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
-                   this.emit(':responseReady');
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4");
+                   this.emit(':askWithCard', "choose and attack", repromptSpeech, cardTitle, cardContent, imageObj);
                 }else if(firstPlayerChar == 4){
                     
                   //largeImageUrl: 'https://s3.amazonaws.com/creaturecommand/KlakiChooseAttack.jpg';
@@ -144,11 +144,11 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/KlakChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
-                   this.emit(':responseReady');
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4");
+              this.emit(':askWithCard', "choose and attack", repromptSpeech, cardTitle, cardContent, imageObj);
                 }
                      //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                     this.emit(':responseReady');
+                    this.emit(':ask',"choose another attack");
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
@@ -173,8 +173,8 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/VaruChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
-                    this.emit(':responseReady');
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4");
+                    this.emit(':askWithCard', "choose and attack", repromptSpeech, cardTitle, cardContent, imageObj);
                
                 }if(secondPlayerChar == 2){
                
@@ -184,8 +184,8 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
-                    this.emit(':responseReady');
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4");
+                    this.emit(':askWithCard', "choose and attack", repromptSpeech, cardTitle, cardContent, imageObj);
                
                 }if(secondPlayerChar == 3){
                
@@ -195,8 +195,8 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/BaboolChooseAttack.jpg"
                     };
                       // Change this based on attack
-                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
-                    this.emit(':responseReady');
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4");
+                    this.emit(':askWithCard', "choose and attack", repromptSpeech, cardTitle, cardContent, imageObj);
                
                 }else if(secondPlayerChar == 4){
                     const imageObj = {
@@ -206,18 +206,18 @@ const handlers = {
                   
                     };
                     // Change this based on attack
-                    this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
-                    this.emit(':responseReady');
+                    this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruFireP1.mp4");
+                   this.emit(':askWithCard', "choose and attack", repromptSpeech, cardTitle, cardContent, imageObj);
                 }
                      
-                     this.emit(':responseReady');
+                     this.emit(':ask',"choose another attack");
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
          }
         }
 
-        this.emit(':responseReady');
+        this.emit(':ask',"choose another attack");
 },
 
 // this is the tornado attack for the creature Varu
@@ -324,7 +324,7 @@ const handlers = {
                       largeImageUrl: "https://s3.amazonaws.com/creaturecommand/MomoltChooseAttack.jpg"
                     };
                     // Change this based on attaack
-                   this.response.playVideo(/**/).cardRenderer(cardTitle, cardContent, imageObj);
+                   this.response.playVideo("https://s3.amazonaws.com/creaturecommand/VaruTornadoP1.mp4").cardRenderer(cardTitle, cardContent, imageObj);
                    this.emit(':responseReady');
                 }else if(secondPlayerChar == 3){
                     
@@ -647,11 +647,11 @@ const handlers = {
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
             doDmgPlayerTwo(babool, "waterpump");
              turn = 1;
-//               if (pOneHp <= 0 && pTwoHp > 0)
-//              {
-//               winCondition("Player 2 Wins!");
-//               this.emit(':responseReady');
-//              }
+               if (pOneHp <= 0 && pTwoHp > 0)
+              {
+               winCondition("Player 2 Wins!");
+               this.emit(':responseReady');
+             }
             const cardTitle = 'CURRENT HP';
             const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
             const repromptSpeech = "What you want dog";
@@ -905,11 +905,11 @@ const handlers = {
           // VideoApp.Play directives can be added to the response
          if (this.event.context.System.device.supportedInterfaces.VideoApp) {
              doDmgPlayerTwo(klaki, 'waterBlast');
-//                if (pOneHp <= 0 && pTwoHp > 0)
-//              {
-//               winCondition("Player 2 Wins!");
-//               this.emit(':responseReady');
-//              }
+             if (pOneHp <= 0 && pTwoHp > 0)
+           {
+              winCondition("Player 2 Wins!");
+             this.emit(':responseReady')
+             }
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -970,11 +970,11 @@ const handlers = {
           if (this.event.context.System.device.supportedInterfaces.VideoApp) {
              doDmgPlayerOne(klaki, 'waterBlast');
               turn = 2;
-//                if (pTwoHp <= 0 && pOneHp > 0)
-//              {
-//               winCondition("Player 1 Wins!");
-//               this.emit(':responseReady');
-//              }
+                if (pTwoHp <= 0 && pOneHp > 0)
+              {
+               winCondition("Player 1 Wins!");
+               this.emit(':responseReady');
+             }
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = "What you want dog";
@@ -1297,7 +1297,7 @@ else if (firstPlayerChar == klaki){
                 const cardTitle = 'CURRENT HP';
                 const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
                 const repromptSpeech = ' ';
-                const outputSpeech = "Player two you chose momolt ,Player one choose an attack";
+                const outputSpeech = "Player two you choose momolt ,Player one choose an attack";
                 var imageObj;
                 if (firstPlayerChar == varu) {
           imageObj = {
@@ -1396,9 +1396,10 @@ else if (firstPlayerChar == klaki){
         this.emit(':tell', this.t('STOP_MESSAGE'));
     },
     'Unhandled': function () {
-        this.attributes.speechOutput = this.t('HELP_MESSAGE');
-        this.attributes.repromptSpeech = this.t('HELP_REPROMPT');
-        this.emit(':ask', this.attributes.speechOutput, this.attributes.repromptSpeech);
+        const message = 'Say yes to continue, or no to end the game.';
+        this.response.speak(message)
+                    .listen(message);
+        this.emit(':responseReady');
     },
 };
 
@@ -1530,10 +1531,12 @@ function winCondition(winner){
      const cardTitle = winner;
       // VideoApp.Play directives can be added to the response
     if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-        this.response.cardRenderer(cardTitle);
+        this.response.cardRenderer(cardTitle,"WellDone!");
+        this.emit(':responseReady');
     }else {
         this.response.speak("The video cannot be played on your device. " +
         "To watch this video, try launching the skill from your echo show device.");
+        this.emit(':responseReady');
     }
     this.emit(':responseReady');
    }
