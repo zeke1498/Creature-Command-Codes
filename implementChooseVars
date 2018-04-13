@@ -1,0 +1,282 @@
+ 'clacky_chosen' : function(){
+        // make a differnt intent for each of the characters following this logic!
+        if(pselection == 1){
+            firstPlayerChar = 4; 
+            pselection = 2;
+           renderTemplate.call(this, charSelectTwo);
+        }else{
+            secondPlayerChar = 4;
+            turn = 1;
+                if (firstPlayerChar == varu) {
+             var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Varu+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+
+}
+else if (firstPlayerChar == momolt ) {
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Momolt+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          }; 
+}
+else if (firstPlayerChar == babool){
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Babool+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+    }
+
+else if (firstPlayerChar == klaki){
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Babool+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+}
+        renderTemplate.call(this, content);
+        }
+        
+    },
+        'varu_chosen' : function(){
+        // make a differnt intent for each of the characters following this logic!
+        if(pselection == 1){
+            firstPlayerChar = 1; 
+           pselection = 2;
+           renderTemplate.call(this, charSelectTwo);
+        }else{
+            secondPlayerChar = 1;
+                if (firstPlayerChar == varu) {
+                    var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Varu+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+
+}
+else if (firstPlayerChar == momolt ) {
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Momolt+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };    
+}
+else if (firstPlayerChar == babool){
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Babool+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+    
+}
+else if (firstPlayerChar == klaki){
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Babool+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+}
+            renderTemplate.call(this, content);
+      }  
+    },
+
+    'momolt_chosen' : function(){
+    // make a differnt intent for each of the characters following this logic!
+    if(pselection == 1){
+       firstPlayerChar = momolt; 
+       pselection = 2;
+       renderTemplate.call(this, charSelectTwo);
+    }else{
+        secondPlayerChar = momolt;
+        turn = 1;
+                if (firstPlayerChar == varu) {
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Varu+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+
+}
+else if (firstPlayerChar == momolt ) {
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Momolt+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };    
+}
+else if (firstPlayerChar == babool){
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Babool+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+    
+}
+else if (firstPlayerChar == klaki){
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Babool+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+}
+            renderTemplate.call(this, content);
+    }
+},
+
+'babool_chosen' : function(){
+    // make a differnt intent for each of the characters following this logic!
+    if(pselection == 1){
+       firstPlayerChar = babool; 
+       pselection = 2;
+       renderTemplate.call(this, charSelectTwo);
+    }else{
+        secondPlayerChar = babool;
+        turn = 1;
+         if (firstPlayerChar == varu) {
+          var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Varu+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+}
+else if (firstPlayerChar == momolt ) {
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Momolt+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };    
+}
+else if (firstPlayerChar == babool){
+            var content = {
+             "hasDisplaySpeechOutput" : "Select an attack",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Player One Please select a character!",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Babool+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+    
+}
+else if (firstPlayerChar == klaki){
+              var content = {
+             "hasDisplaySpeechOutput" : "",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Body titile",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Character+Screen+Player1.png",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+          
+          renderTemplate.call(this, content);
+        }
+    }
+    },
