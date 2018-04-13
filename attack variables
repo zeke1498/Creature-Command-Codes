@@ -1,0 +1,105 @@
+var fireballVaruLeft = {
+     "hasDisplaySpeechOutput" : "Varu used fireball",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the win screen",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+
+var fireballVaruRight = {
+     "hasDisplaySpeechOutput" : "Varu used fireball",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the win screen",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+
+var tornadoVaruLeft = {
+     "hasDisplaySpeechOutput" : "Varu used tornado",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the win screen",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+
+var tornadoVaruRight = {
+     "hasDisplaySpeechOutput" : "Varu used tornado",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the win screen",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+
+var icespinKlakLeft = {
+     "hasDisplaySpeechOutput" : "Klak used Ice Spin",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the win screen",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+
+var icespinKlakRight = {
+     "hasDisplaySpeechOutput" : "Klak used Ice Spin",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the win screen",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+
+var waterblastKlakLeft = {
+     "hasDisplaySpeechOutput" : "Klak used Waterblast",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the win screen",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+
+var waterblastKlakRight = {
+     "hasDisplaySpeechOutput" : "Klak used Waterblast",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the win screen",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+          
+          //renderTemplate.call(this, "name of variable");
