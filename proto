@@ -378,14 +378,13 @@ const handlers = {
 
     'PlayVideoIntent' : function() {
       var text = "HEllo";
-      var content = 14 + "is the HP"
               var content = {
              "hasDisplaySpeechOutput" : text,
              "hasDisplayRepromptText" : "Testing",
              "simpleCardTitle" : "Hello Sir",
              "simpleCardContent" : "This is card content",
              "bodyTemplateTitle" : "Body titile",
-             "bodyTemplateContent" : content,
+             "bodyTemplateContent" : "",
              "templateToken" : "factBodyTemplate",
              "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+End+Screen.png",
              "askOrTell" : ":ask",
@@ -394,6 +393,51 @@ const handlers = {
           
           renderTemplate.call(this, content);
     
+    },
+    
+    'nextCharIntent' : function()
+    {
+        if(turn == 1)
+        {
+            if(firstPlayerChar == 1){
+    
+              renderTemplate.call(this, chooseVaru);
+                     
+            }else if(firstPlayerChar == 2){
+              
+              renderTemplate.call(this, chooseMomolt);
+              
+            }else if(firstPlayerChar == 3){
+              
+              renderTemplate.call(this, chooseBabool);
+    
+            }else if(firstPlayerChar == 4){
+              
+              renderTemplate.call(this, chooseKlaki);
+    
+            }
+        }else if(turn == 2)
+        {
+            
+            if(secondPlayerChar == 1){
+                    
+                renderTemplate.call(this, chooseVaru);
+               
+            }if(secondPlayerChar == 2){
+          
+                 renderTemplate.call(this, chooseMomolt);
+               
+            }if(secondPlayerChar == 3){
+          
+                renderTemplate.call(this, chooseBabool);
+               
+            }else if(secondPlayerChar == 4){
+          
+                renderTemplate.call(this, chooseKlaki);
+
+            }
+            
+        }
     },
 
 
@@ -410,26 +454,9 @@ const handlers = {
 //               this.emit(':responseReady');
 //              }
             renderTemplate.call(this, fireballVaruRight);
+            
+                 this.emit('nextCharIntent');
                  
-                if(firstPlayerChar == 1){
-
-          renderTemplate.call(this, chooseVaru);
-                 
-                }else if(firstPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-          
-                }else if(firstPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(firstPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                     //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                    this.emit(':ask',"choose another attack");
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
@@ -444,26 +471,9 @@ const handlers = {
 //               this.emit(':responseReady');
 //              }
             renderTemplate.call(this, fireballVaruLeft);
-
-                if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-               
-                }if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-               
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                     
-                     this.emit(':ask',"choose another attack");
+            
+                this.emit('nextCharIntent');
+                
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -487,25 +497,8 @@ const handlers = {
 //              }
             renderTemplate.call(this, tornadoVaruRight);
                  
-                if(firstPlayerChar == 1){
-                    
-                        renderTemplate.call(this, chooseVaru);
-                 
-                }else if(firstPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(firstPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(firstPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                     //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                     this.emit(':responseReady');
+                this.emit('nextCharIntent');
+               
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
@@ -521,25 +514,8 @@ const handlers = {
 //              }
               renderTemplate.call(this, tornadoVaruLeft);
 
-                if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                     
-                     this.emit(':responseReady');
+                this.emit('nextCharIntent');
+                
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -565,25 +541,8 @@ const handlers = {
 
             renderTemplate.call(this, earthquakeMomoltRight);
                  
-           if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                     //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                     this.emit(':responseReady');
+           this.emit('nextCharIntent');
+           
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
@@ -599,25 +558,8 @@ const handlers = {
 //              }
             renderTemplate.call(this, earthquakeMomoltLeft);
 
-                if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                     
-                     this.emit(':responseReady');
+                this.emit('nextCharIntent');
+                
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -641,25 +583,8 @@ const handlers = {
 
             renderTemplate.call(this, punchMomoltRight);
                  
-                if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                     //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Varu_Tornado_Not_Final.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                     this.emit(':responseReady');
+                this.emit('nextCharIntent');
+                
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
@@ -675,25 +600,8 @@ const handlers = {
 //              }
               renderTemplate.call(this, punchMomoltLeft);
 
-                if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                     
-                     this.emit(':responseReady');
+                this.emit('nextCharIntent');
+                
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -717,24 +625,8 @@ const handlers = {
              // }
             renderTemplate.call(this, waterpumpBaboolRight);
 
-            if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-            //this.response.playVideo(/*Plays the Waterpump attack animation (Right side)*/);
+                this.emit('nextCharIntent');
+                
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
@@ -753,24 +645,8 @@ const handlers = {
 //              }
             renderTemplate.call(this, waterpumpBaboolLeft);
 
-              if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-              this.response.playVideo("https://s3.amazonaws.com/creaturecommand/Babool_Water_Blast(Still+Rough).mp4");
+              this.emit('nextCharIntent');
+              
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -793,24 +669,8 @@ const handlers = {
 //              }
             renderTemplate.call(this, rocksBaboolRight);
 
-            if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-            //this.response.playVideo(/*Plays the Waterpump attack animation (Right side)*/);
+                this.emit('nextCharIntent');
+                
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
@@ -829,25 +689,8 @@ const handlers = {
 //              }
             renderTemplate.call(this, rocksBaboolLeft);
 
-              if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-              this.response.playVideo('https://s3.amazonaws.com/creaturecommand/Babool_Psychic(Still_Rough).mp4');
-              this.emit(':responseReady');
+              this.emit('nextCharIntent');
+              
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -877,25 +720,8 @@ const handlers = {
            //   }
                 renderTemplate.call(this, waterblastKlakRight);
 
-                if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                     //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                     this.emit(':responseReady');
+                this.emit('nextCharIntent');
+                
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
@@ -913,26 +739,8 @@ const handlers = {
              renderTemplate.call(this, waterblastKlakLeft);
                 
                 
-                if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
+                this.emit('nextCharIntent');
                 
-                     
-                     this.emit(':responseReady');
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -956,28 +764,8 @@ const handlers = {
 //              }
             renderTemplate.call(this, icespinKlakRight);
 
-                if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                     //this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4').cardRenderer(cardTitle, cardContent, imageObj);
-                     this.emit(':responseReady');
-        
-             
-             
+                this.emit('nextCharIntent');
+                
          } else {
              this.response.speak("The video cannot be played on your device. " +
              "To watch this video, try launching the skill from your echo show device.");
@@ -994,27 +782,8 @@ const handlers = {
 //              }
             renderTemplate.call(this, icespinKlakLeft);
             
+                this.emit('nextCharIntent');
                 
-                if(secondPlayerChar == 1){
-                    
-                    renderTemplate.call(this, chooseVaru);
-               
-                }else if(secondPlayerChar == 2){
-          
-          renderTemplate.call(this, chooseMomolt);
-
-                }else if(secondPlayerChar == 3){
-          
-          renderTemplate.call(this, chooseBabool);
-
-                }else if(secondPlayerChar == 4){
-          
-          renderTemplate.call(this, chooseKlaki);
-
-                }
-                
-                     
-                     this.emit(':responseReady');
         } else {
               this.response.speak("The video cannot be played on your device. " +
               "To watch this video, try launching the skill from your echo show device.");
@@ -1045,11 +814,6 @@ const handlers = {
         }else{
             secondPlayerChar = 4;
             turn = 1;
-            const outputSpeech = "Player two you chose clacky ,Player one choose an attack";
-                const cardTitle = 'CURRENT HP';
-                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
-                const repromptSpeech = ' ';
-                var imageObj;
                 if (firstPlayerChar == varu) {
              var content = {
              "hasDisplaySpeechOutput" : "Select an attack",
@@ -1120,11 +884,6 @@ else if (firstPlayerChar == klaki){
            this.emit(':ask',"Player one you chose varu ,Player two please choose a character!");
         }else{
             secondPlayerChar = 1;
-           const cardTitle = 'CURRENT HP';
-                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
-                const repromptSpeech = ' ';
-                const outputSpeech = "Player two you chose varu ,Player one choose an attack"
-                var imageObj;
                 if (firstPlayerChar == varu) {
                     var content = {
              "hasDisplaySpeechOutput" : "Select an attack",
@@ -1196,11 +955,6 @@ else if (firstPlayerChar == klaki){
     }else{
         secondPlayerChar = momolt;
         turn = 1;
-                const cardTitle = 'CURRENT HP';
-                const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
-                const repromptSpeech = ' ';
-                const outputSpeech = "Player two you choose momolt ,Player one choose an attack";
-                var imageObj;
                 if (firstPlayerChar == varu) {
             var content = {
              "hasDisplaySpeechOutput" : "Select an attack",
@@ -1272,11 +1026,6 @@ else if (firstPlayerChar == klaki){
     }else{
         secondPlayerChar = babool;
         turn = 1;
-           const cardTitle = 'CURRENT HP';
-           const cardContent = 'Player1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
-           const repromptSpeech = ' ';
-           const outputSpeech = "Player two you chose babool ,Player one choose an attack";
-           var imageObj;
          if (firstPlayerChar == varu) {
           var content = {
              "hasDisplaySpeechOutput" : "Select an attack",
@@ -1321,15 +1070,13 @@ else if (firstPlayerChar == babool){
     
 }
 else if (firstPlayerChar == klaki){
-      var text = "";
-      var content = ""
               var content = {
-             "hasDisplaySpeechOutput" : text,
+             "hasDisplaySpeechOutput" : "",
              "hasDisplayRepromptText" : "Testing",
              "simpleCardTitle" : "Hello Sir",
              "simpleCardContent" : "This is card content",
              "bodyTemplateTitle" : "Body titile",
-             "bodyTemplateContent" : content,
+             "bodyTemplateContent" : "",
              "templateToken" : "factBodyTemplate",
              "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Character+Screen+Player1.png",
              "askOrTell" : ":ask",
@@ -1337,7 +1084,7 @@ else if (firstPlayerChar == klaki){
           };
           
           renderTemplate.call(this, content);
-}
+        }
     }
     },
     'LaunchRequest': function () {
