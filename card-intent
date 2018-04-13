@@ -88,7 +88,7 @@
              "bodyTemplateContent" : "",
              "templateToken" : "factBodyTemplate",
              "bgimg": "The URL for the card",
-             "askOrTell" : ":ask",
+             "askOrTell" : ":tell",
              "sessionAttributes": {}
           };
           
@@ -102,7 +102,7 @@
              "bodyTemplateContent" : "",
              "templateToken" : "factBodyTemplate",
              "bgimg": "The URL for the card",
-             "askOrTell" : ":ask",
+             "askOrTell" : ":tell",
              "sessionAttributes": {}
           };
 
