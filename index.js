@@ -63,22 +63,20 @@ const handlers = {
   pTwoHp = 50;
 },
     'PlayVideoIntent' : function() {
-    const cardTitle = 'CURRENT HP';
-    const cardContent = 'PLayer1hp: '+pOneHp+'/50  PLayer2hp'+pTwoHp+'/50';
-    const repromptSpeech = "What you want dog";
-    const imageObj = {
-      largeImageUrl: 'https://imgs.xkcd.com/comics/standards.png'
-    };
-
-    // VideoApp.Play directives can be added to the response
-    if (this.event.context.System.device.supportedInterfaces.VideoApp) {
-        this.response.playVideo('https://s3.amazonaws.com/creaturecommand/klaki_water_attack.mp4')
-        .cardRenderer(cardTitle, cardContent, imageObj);
-    }else {
-        this.response.speak("The video cannot be played on your device. " +
-        "To watch this video, try launching the skill from your echo show device.");
-    }
-    this.emit(':responseReady');
+              var content = {
+             "hasDisplaySpeechOutput" : "Hello buds what it do",
+             "hasDisplayRepromptText" : "Testing",
+             "simpleCardTitle" : "Hello Sir",
+             "simpleCardContent" : "This is card content",
+             "bodyTemplateTitle" : "Body titile",
+             "bodyTemplateContent" : "Body content",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcDmBiRjuTrRr3Dk5l_0UgdW_VpxldVUAngRxxWnpGzvOttIl8",
+             "askOrTell" : ":tell",
+             "sessionAttributes": {}
+          };
+          
+          renderTemplate.call(this, content);
     
     },
 
@@ -1539,4 +1537,54 @@ function winCondition(winner){
         this.emit(':responseReady');
     }
     this.emit(':responseReady');
+   }
+   function renderTemplate (content) {
+    var response = {
+             "version": "1.0",
+             "response": {
+               "directives": [
+                 {
+                   "type": "Display.RenderTemplate",
+                   "template": {
+                     "type": "BodyTemplate1",
+                     "title": content.bodyTemplateTitle,
+                     "token": content.templateToken,
+                         "backgroundImage": {
+                          "contentDescription": "Textured grey background",
+                          "sources": [
+                            {
+                              "url": content.bgimg,
+                            }
+                          ]
+                         },
+                     "textContent": {
+                       "primaryText": {
+                         "type": "RichText",
+                         "text": "<font size = '5'>"+content.bodyTemplateContent+"</font>"
+                       }
+                     },
+                     "backButton": "HIDDEN"
+                   }
+                 }
+               ],
+               "outputSpeech": {
+                 "type": "SSML",
+                 "ssml": "<speak>"+content.hasDisplaySpeechOutput+"</speak>"
+               },
+               "reprompt": {
+                 "outputSpeech": {
+                   "type": "SSML",
+                   "ssml": "<speak>"+content.hasDisplayRepromptText+"</speak>"
+                 }
+               },
+               "shouldEndSession": content.askOrTell==":tell",
+               "card": {
+                 "type": "Simple",
+                 "title": content.simpleCardTitle,
+                 "content": content.simpleCardContent
+               }
+             },
+             "sessionAttributes": content.sessionAttributes
+           }
+           this.context.succeed(response); 
    }
