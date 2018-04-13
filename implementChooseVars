@@ -8,19 +8,7 @@
             secondPlayerChar = 4;
             turn = 1;
                 if (firstPlayerChar == varu) {
-             var content = {
-             "hasDisplaySpeechOutput" : "Select an attack",
-             "hasDisplayRepromptText" : "Testing",
-             "simpleCardTitle" : "Hello Sir",
-             "simpleCardContent" : "This is card content",
-             "bodyTemplateTitle" : "Player One Please select a character!",
-             "bodyTemplateContent" : "",
-             "templateToken" : "factBodyTemplate",
-             "bgimg": "https://s3.amazonaws.com/cre-imgs/Creature+Command+Varu+Screen+Player1.png",
-             "askOrTell" : ":ask",
-             "sessionAttributes": {}
-          };
-
+             renderTemplate.call(this, char
 }
 else if (firstPlayerChar == momolt ) {
             var content = {
@@ -280,3 +268,122 @@ else if (firstPlayerChar == klaki){
         }
     }
     },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       'clacky_chosen' : function(){
+        // make a differnt intent for each of the characters following this logic!
+        if(pselection == 1){
+            firstPlayerChar = 4; 
+            pselection = 2;
+           renderTemplate.call(this, charSelectTwo);
+        }else{
+            secondPlayerChar = 4;
+            turn = 1;
+                if (firstPlayerChar == varu) {
+             renderTemplate.call(this, chooseKlaki);
+
+}
+else if (firstPlayerChar == momolt ) {
+           
+        renderTemplate.call(this, chooseMomolt); 
+}
+else if (firstPlayerChar == babool){
+         renderTemplate.call(this, chooseBabool);
+    }
+
+else if (firstPlayerChar == klaki){
+   
+        renderTemplate.call(this, chooseKlaki);
+
+}
+        }
+        
+    },
+        'varu_chosen' : function(){
+        // make a differnt intent for each of the characters following this logic!
+        if(pselection == 1){
+            firstPlayerChar = 1; 
+           pselection = 2;
+           renderTemplate.call(this, charSelectTwo);
+        }else{
+            secondPlayerChar = 1;
+                if (firstPlayerChar == varu) {
+        renderTemplate.call(this, chooseVaru);
+
+}
+else if (firstPlayerChar == momolt ) {
+         renderTemplate.call(this, chooseMomolt);   
+}
+else if (firstPlayerChar == babool){
+         renderTemplate.call(this, chooseBabool);
+    
+}
+else if (firstPlayerChar == klaki){
+        renderTemplate.call(this, chooseKlaki);
+}
+            renderTemplate.call(this, content);
+      }  
+    },
+
+    'momolt_chosen' : function(){
+    // make a differnt intent for each of the characters following this logic!
+    if(pselection == 1){
+       firstPlayerChar = momolt; 
+       pselection = 2;
+       renderTemplate.call(this, charSelectTwo);
+    }else{
+        secondPlayerChar = momolt;
+        turn = 1;
+                if (firstPlayerChar == varu) {
+renderTemplate.call(this, chooseVaru);
+
+}
+else if (firstPlayerChar == momolt ) {
+       renderTemplate.call(this, chooseMomolt);   
+}
+else if (firstPlayerChar == babool){
+         renderTemplate.call(this, chooseBabool);
+    
+}
+else if (firstPlayerChar == klaki){
+        renderTemplate.call(this, chooseKlaki)
+}
+        
+    }
+},
+
+'babool_chosen' : function(){
+    // make a differnt intent for each of the characters following this logic!
+    if(pselection == 1){
+       firstPlayerChar = babool; 
+       pselection = 2;
+       renderTemplate.call(this, charSelectTwo);
+    }else{
+        secondPlayerChar = babool;
+        turn = 1;
+         if (firstPlayerChar == varu) {
+        renderTemplate.call(this, chooseVaru);
+}
+else if (firstPlayerChar == momolt ) {
+        renderTemplate.call(this, chooseMomolt);
+}
+else if (firstPlayerChar == babool){
+         renderTemplate.call(this, chooseBabool);
+    
+}
+else if (firstPlayerChar == klaki){
+        renderTemplate.call(this, chooseKlaki);
+        }
+    }
+    },
+
