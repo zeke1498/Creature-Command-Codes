@@ -1,4 +1,4 @@
-              var chooseVaru = {
+       var chooseVaru = {
              "hasDisplaySpeechOutput" : "Choose an attack",
              "hasDisplayRepromptText" : "Don't forget to choose an attack",
              "simpleCardTitle" : "Current Health:",
@@ -10,7 +10,66 @@
              "askOrTell" : ":ask",
              "sessionAttributes": {}
           };
-          
-          //renderTemplate.call(this, "name of variable");
-          
-          
+       var chooseBabool = {
+             "hasDisplaySpeechOutput" : "Choose an attack",
+             "hasDisplayRepromptText" : "Don't forget to choose an attack",
+             "simpleCardTitle" : "Current Health:",
+             "simpleCardContent" : "Player One HP: " + pOneHp + "/50  Player Two HP: " + pTwoHp + "/50",
+             "bodyTemplateTitle" : "Current Health:",
+             "bodyTemplateContent" : "Player One HP: " + pOneHp + "/50  Player Two HP: " + pTwoHp + "/50",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "The URL for the card",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+             
+             
+       var chooseMomolt = {
+             "hasDisplaySpeechOutput" : "Choose an attack",
+             "hasDisplayRepromptText" : "Don't forget to choose an attack",
+             "simpleCardTitle" : "Current Health:",
+             "simpleCardContent" : "Player One HP: " + pOneHp + "/50  Player Two HP: " + pTwoHp + "/50",
+             "bodyTemplateTitle" : "Current Health:",
+             "bodyTemplateContent" : "Player One HP: " + pOneHp + "/50  Player Two HP: " + pTwoHp + "/50",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "The URL for the card",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+       var chooseKlaki = {
+             "hasDisplaySpeechOutput" : "Choose an attack",
+             "hasDisplayRepromptText" : "Don't forget to choose an attack",
+             "simpleCardTitle" : "Current Health:",
+             "simpleCardContent" : "Player One HP: " + pOneHp + "/50  Player Two HP: " + pTwoHp + "/50",
+             "bodyTemplateTitle" : "Current Health:",
+             "bodyTemplateContent" : "Player One HP: " + pOneHp + "/50  Player Two HP: " + pTwoHp + "/50",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "The URL for the card",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+
+       var char1Win = {
+             "hasDisplaySpeechOutput" : "Player 1 Wins!",
+             "hasDisplayRepromptText" : "",
+             "simpleCardTitle" : "",
+             "simpleCardContent" : "",
+             "bodyTemplateTitle" : "",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "The URL for the card",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
+       var char2Win = {
+                      "hasDisplaySpeechOutput" : "Player 1 Wins!",
+             "hasDisplayRepromptText" : "",
+             "simpleCardTitle" : "",
+             "simpleCardContent" : "",
+             "bodyTemplateTitle" : "",
+             "bodyTemplateContent" : "",
+             "templateToken" : "factBodyTemplate",
+             "bgimg": "The URL for the card",
+             "askOrTell" : ":ask",
+             "sessionAttributes": {}
+          };
