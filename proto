@@ -11,7 +11,7 @@
 'use strict';
 
 const Alexa = require('alexa-sdk');
-const recipes = require('./recipes');
+// const recipes = require('./recipes');
 
 const APP_ID = undefined; // TODO replace with your app ID (OPTIONAL).
 
@@ -31,6 +31,7 @@ var turn = 1;
 var firstPlayerChar;
 var pselection = 1;
 var secondPlayerChar;
+var winner = 0;
 
 //content variables
 var chooseVaru = {
@@ -1302,6 +1303,6 @@ function winCondition(winner){
                }
              },
              "sessionAttributes": content.sessionAttributes
-           }
+           };
            this.context.succeed(response); 
    }
