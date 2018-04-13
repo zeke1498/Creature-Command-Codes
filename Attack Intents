@@ -1,0 +1,99 @@
+var punchMomoltLeft = {
+     "hasDisplaySpeechOutput" : "Momolt used punch!",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the card",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+var punchMomoltRight = {
+     "hasDisplaySpeechOutput" : "Momolt used punch!",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the card",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+
+var earthquakeMomoltLeft = {
+     "hasDisplaySpeechOutput" : "Momolt used earthquake!",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the card",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+var earthquakeMomoltRight = {
+     "hasDisplaySpeechOutput" : "Momolt used earthquake!",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the card",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+
+var rocksBaboolLeft = {
+     "hasDisplaySpeechOutput" : "Babool used rocks!",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the card",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+var rocksBaboolRight = {
+     "hasDisplaySpeechOutput" : "Babool used rocks!",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the card",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+
+var waterpumpBaboolLeft = {
+     "hasDisplaySpeechOutput" : "Babool used waterpump!",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the card",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
+var waterpumpBaboolRight = {
+     "hasDisplaySpeechOutput" : "Babool used waterpump!",
+     "hasDisplayRepromptText" : "",
+     "simpleCardTitle" : "",
+     "simpleCardContent" : "",
+     "bodyTemplateTitle" : "",
+     "bodyTemplateContent" : "",
+     "templateToken" : "factBodyTemplate",
+     "bgimg": "The URL for the card",
+     "askOrTell" : ":ask",
+     "sessionAttributes": {}
+};
