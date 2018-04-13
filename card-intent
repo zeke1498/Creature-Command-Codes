@@ -10,6 +10,8 @@
              "askOrTell" : ":ask",
              "sessionAttributes": {}
           };
+          
+          
        var chooseBabool = {
              "hasDisplaySpeechOutput" : "Choose an attack",
              "hasDisplayRepromptText" : "Don't forget to choose an attack",
@@ -36,6 +38,8 @@
              "askOrTell" : ":ask",
              "sessionAttributes": {}
           };
+          
+          
        var chooseKlaki = {
              "hasDisplaySpeechOutput" : "Choose an attack",
              "hasDisplayRepromptText" : "Don't forget to choose an attack",
@@ -47,6 +51,32 @@
              "bgimg": "The URL for the card",
              "askOrTell" : ":ask",
              "sessionAttributes": {}
+          };
+          
+          var charSelectOne = {
+            "hasDisplaySpeechOutput" : "Player one choose your Character",
+            "hasDisplayRepromptText" : "Please choose your character",
+            "simpleCardTitle" : "",
+            "simpleCardContent" : "",
+            "bodyTemplateTitle" : "",
+            "bodyTemplateContent" : "",
+            "templateToken" : "factBodyTemplate",
+            "bgimg": "The URL for the win screen",
+            "askOrTell" : ":ask",
+            "sessionAttributes": {}
+          };
+
+          var charSelectTwo = {
+            "hasDisplaySpeechOutput" : "Player two choose your Character",
+            "hasDisplayRepromptText" : "Please choose your character",
+            "simpleCardTitle" : "",
+            "simpleCardContent" : "",
+            "bodyTemplateTitle" : "",
+            "bodyTemplateContent" : "",
+            "templateToken" : "factBodyTemplate",
+            "bgimg": "The URL for the win screen",
+            "askOrTell" : ":ask",
+            "sessionAttributes": {}
           };
 
        var char1Win = {
@@ -61,6 +91,8 @@
              "askOrTell" : ":ask",
              "sessionAttributes": {}
           };
+          
+          
        var char2Win = {
                       "hasDisplaySpeechOutput" : "Player 1 Wins!",
              "hasDisplayRepromptText" : "",
@@ -73,3 +105,7 @@
              "askOrTell" : ":ask",
              "sessionAttributes": {}
           };
+
+
+
+
