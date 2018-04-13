@@ -1,0 +1,26 @@
+'winCondition' : function(){
+  if(winner == 1)
+  {
+    if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+        
+      renderTemplate.call(this, char1Win);
+
+    }else {
+        this.response.speak("The video cannot be played on your device. " +
+        "To watch this video, try launching the skill from your echo show device.");
+        this.emit(':responseReady');
+    }
+  }else if(winner == 2)
+  {
+    if (this.event.context.System.device.supportedInterfaces.VideoApp) {
+        
+      renderTemplate.call(this, char2Win);
+
+    }else {
+        this.response.speak("The video cannot be played on your device. " +
+        "To watch this video, try launching the skill from your echo show device.");
+        this.emit(':responseReady');
+    }
+  }
+    this.emit(':responseReady');
+   },
