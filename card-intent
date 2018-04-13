@@ -1,16 +1,16 @@
-              var content = {
-             "hasDisplaySpeechOutput" : "Hello buds what it do",
-             "hasDisplayRepromptText" : "Testing",
-             "simpleCardTitle" : "Hello Sir",
-             "simpleCardContent" : "This is card content",
-             "bodyTemplateTitle" : "Body titile",
-             "bodyTemplateContent" : "Body content",
+              var chooseVaru = {
+             "hasDisplaySpeechOutput" : "Choose an attack",
+             "hasDisplayRepromptText" : "Don't forget to choose an attack",
+             "simpleCardTitle" : "Current Health:",
+             "simpleCardContent" : "Player One HP: " + pOneHp + "/50  Player Two HP: " + pTwoHp + "/50",
+             "bodyTemplateTitle" : "Current Health:",
+             "bodyTemplateContent" : "Player One HP: " + pOneHp + "/50  Player Two HP: " + pTwoHp + "/50",
              "templateToken" : "factBodyTemplate",
-             "bgimg": "https://fthmb.tqn.com/M1ISdSdfLsU36nAuILe3YlFcY1w=/400x400/filters:fill(auto,1)/success-56a9fd1f3df78cf772abee09.jpg",
+             "bgimg": "The URL for the card",
              "askOrTell" : ":ask",
              "sessionAttributes": {}
           };
           
-          renderTemplate.call(this, content);
+          //renderTemplate.call(this, "name of variable");
           
           
